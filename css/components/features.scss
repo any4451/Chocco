@@ -1,0 +1,20 @@
+
+.features {
+  display: flex;
+}
+.feature {
+  display: flex;
+  margin-right: 45px;
+  &:last-child{
+      margin-right: 0;
+  }
+}
+.feature__text {
+  font-size: 16px;
+  line-height: 1.2;
+  max-width: 72px;
+}
+.feature__icon {
+  width: 50px;
+  margin-right: 7px;
+}
