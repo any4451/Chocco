@@ -1,249 +1,45 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;800&display=swap&subset=cyrillic");
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-  height: 100%; }
+/*
+Error: Invalid CSS after "...der-color: #000": expected "{", was ";"
+        on line 185 of C:\Users\User\Desktop\CHOCCO\css\main.scss
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
+180:   width: 100%;
+181:   height: 57px;
+182:   padding: 18px 11px;
+183:   border: 3px solid transparent;
+184:   &:focus :
+185:   border-color: #000;
+186: }
+187: .form__input--textarea {
+188:   resize: none;
+189:   height: 180px;
+190: }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li,
-div {
-  margin: 0;
-  padding: 0; }
-
-body {
-  height: 100%;
-  font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #666;
-  background: #fff;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative; }
-
-ul li {
-  list-style: none; }
-
-img {
-  max-width: 100%;
-  display: block; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-
-input,
-button {
-  -webkit-appearance: none;
-  outline: none;
-  border: none; }
-
-footer {
-  position: relative;
-  width: 100%; }
-
-.wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden; }
-
-.container {
-  margin: 0 auto;
-  max-width: 940px; }
-
-h1 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase; }
-
-h3 {
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 1.2; }
-
-.offer {
-  width: 37%; }
-
-.offer__title {
-  margin-bottom: 5px; }
-
-.offer__text {
-  font-size: 21px;
-  line-height: 1.2;
-  margin-bottom: 32px; }
-
-.section {
-  height: 100vh;
-  min-height: 650px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative; }
-
-.advantages-section {
-  background: url(../img/leaf-grey.png) center left no-repeat; }
-  .advantages-section:after {
-    content: url(../img/rasberry.png);
-    position: absolute;
-    bottom: -120px;
-    left: 0; }
-
-.headline {
-  width: 45%;
-  text-align: center;
-  margin: 0 auto 56px; }
-
-.section__title {
-  color: #000; }
-
-.hero__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 24px 0 45px;
-  background: url(../img/bars.png) right center/50% auto no-repeat; }
-
-.hero {
-  height: 100vh;
-  min-height: 650px;
-  background: url(../img/hero.png) right bottom no-repeat;
-  background-color: #61c4d9;
-  color: #fff;
-  position: relative; }
-  .hero:before {
-    content: url(../img/leaf1.png);
-    position: absolute;
-    bottom: -60px;
-    left: 153px; }
-  .hero:after {
-    content: url(/img/berries.png);
-    position: absolute;
-    right: 140px;
-    bottom: -54px; }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.logo {
-  display: block; }
-  .logo img {
-    width: 100%; }
-
-.menu__list {
-  display: flex;
-  justify-items: center; }
-  .menu__list .menu__item {
-    margin-left: 27px; }
-
-.phone {
-  display: flex;
-  align-items: center;
-  font-size: 24px; }
-
-.phone__icon {
-  width: 12px;
-  height: 12px;
-  margin-right: 6px; }
-
-.features {
-  display: flex; }
-
-.feature {
-  display: flex;
-  margin-right: 45px; }
-  .feature:last-child {
-    margin-right: 0; }
-
-.feature__text {
-  font-size: 16px;
-  line-height: 1.2;
-  max-width: 72px; }
-
-.feature__icon {
-  width: 50px;
-  margin-right: 7px; }
-
-.btn {
-  display: inline-block;
-  font-size: 19px;
-  text-transform: uppercase;
-  font-weight: 800;
-  padding: 18px 35px;
-  border-radius: 100px;
-  line-height: 1;
-  transition: all 0.2s; }
-  .btn--theme--white {
-    color: #0b4d3c;
-    background: #fff; }
-    .btn--theme--white:hover {
-      background: #0b4d3c;
-      color: #fff; }
-
-.advantages {
-  display: flex; }
-
-.advantage {
-  text-align: center;
-  padding: 0 2%;
-  flex: 1;
-  position: relative; }
-  .advantage:first-child {
-    padding-left: 0; }
-  .advantage:last-child {
-    padding-right: 0; }
-    .advantage:last-child::after {
-      display: none; }
-  .advantage:after {
-    position: absolute;
-    content: url(/img/decor-separator.png);
-    top: 50px;
-    right: 0;
-    transform: translate(50%); }
-
-.advantage__pic {
-  margin-bottom: 28px; }
-
-.advantage__pic-wrap {
-  display: block;
-  margin: 0 auto;
-  width: 126px;
-  height: 126px;
-  position: relative;
-  background: #f2f5f4;
-  border-radius: 50%;
-  overflow: hidden; }
-  .advantage__pic-wrap img {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    filter: brightness(0.2); }
-
-.advantage__title {
-  color: #000;
-  margin-bottom: 20px; }
-
-.advantage__text p {
-  line-height: 1.2; }
+Backtrace:
+C:\Users\User\Desktop\CHOCCO\css\main.scss:185
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...der-color: #000\": expected \"{\", was \";\"\A         on line 185 of C:\Users\User\Desktop\CHOCCO\css\main.scss\A \A 180:   width: 100%;\A 181:   height: 57px;\A 182:   padding: 18px 11px;\A 183:   border: 3px solid transparent;\A 184:   &:focus :\A 185:   border-color: #000;\A 186: }\A 187: .form__input--textarea {\A 188:   resize: none;\A 189:   height: 180px;\A 190: }"; }

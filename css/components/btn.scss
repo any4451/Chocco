@@ -8,11 +8,28 @@
   line-height: 1;
   transition: all 0.2s;
   &--theme--white {
-    color: #0b4d3c;
+    color: $green;
     background: #fff;
     &:hover {
-      background: #0b4d3c;
+      background: $green;
       color: #fff;
+    }
+  }
+  &--theme--green {
+    color: #fff;
+    background: $green;
+    &:hover {
+      background: #fff;
+      color: $green;
+    }
+  }
+  &--theme--trans {
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 400;
+    background: transparent;
+    &:hover {
+      color: $green;
     }
   }
 }

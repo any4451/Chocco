@@ -1,0 +1,45 @@
+.advantages {
+  display: flex; }
+
+.advantage {
+  text-align: center;
+  padding: 0 2%;
+  flex: 1;
+  position: relative; }
+  .advantage:first-child {
+    padding-left: 0; }
+  .advantage:last-child {
+    padding-right: 0; }
+    .advantage:last-child::after {
+      display: none; }
+  .advantage:after {
+    position: absolute;
+    content: url(/img/decor-separator.png);
+    top: 50px;
+    right: 0;
+    transform: translate(50%); }
+
+.advantage__pic {
+  margin-bottom: 28px; }
+
+.advantage__pic-wrap {
+  display: block;
+  margin: 0 auto;
+  width: 126px;
+  height: 126px;
+  position: relative;
+  background: #f2f5f4;
+  border-radius: 50%;
+  overflow: hidden; }
+  .advantage__pic-wrap img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.2); }
+
+.advantage__title {
+  color: #000;
+  margin-bottom: 20px; }
