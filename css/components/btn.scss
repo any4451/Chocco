@@ -1,12 +1,15 @@
 .btn {
   display: inline-block;
-  font-size: 19px;
+  font-size: 1.1875rem;
   text-transform: uppercase;
   font-weight: 800;
-  padding: 18px 35px;
+  padding: 1.25rem 2.1875rem;
   border-radius: 100px;
   line-height: 1;
   transition: all 0.2s;
+  @include tablets {
+    font-size: 1.125rem;
+  }
   &--theme--white {
     color: $green;
     background: #fff;
