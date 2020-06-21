@@ -534,7 +534,7 @@ h3 {
     padding: 0;
     display: flex;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -751,7 +751,7 @@ h3 {
 }
 @media screen and (max-width: 769px) {
   .form__input--textarea {
-    height: 80px;
+    height: 5rem;
   }
 }
 
@@ -792,8 +792,8 @@ h3 {
 
 .checkmark__icon {
   fill: #0b4d3c;
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
   display: none;
 }
 

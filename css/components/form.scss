@@ -48,7 +48,7 @@
   resize: none;
   height: 11.25rem;
   @include tablets {
-    height: 80px;
+    height: 5rem;
   }
 }
 .form__title {
@@ -84,8 +84,8 @@
 }
 .checkmark__icon {
   fill: $green;
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
   display: none;
 }
 .radio__visible--checkbox {
