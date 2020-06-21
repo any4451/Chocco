@@ -1,6 +1,10 @@
 $green: #0b4d3c;
+$baseFontSize: 18px;
+//breakpoints
+$tablets: 769px;
+$phones: 481px;
 
-
+@import "media";
 //normalize
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;600;700;800&display=swap&subset=cyrillic");
@@ -13,4 +17,6 @@ $green: #0b4d3c;
 @import "components/reviews";
 @import "components/form";
 @import "components/fixed-menu";
+@import "components/footer";
+
 
