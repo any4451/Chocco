@@ -104,7 +104,7 @@ h3 {
       margin-bottom: 0.625rem;
       width: 19.75rem;
       height: 20.625rem;
-      background: url(/img/hero-tablet.png) center center / contain no-repeat;
+      background: url(../img/hero-tablet.png) center center / contain no-repeat;
     }
   }
 }
@@ -143,16 +143,16 @@ h3 {
   margin-bottom: 0.625rem;
 }
 .reviews-section {
-  background: url(/img/leaf-grey-reviews.png) left bottom -10.625rem no-repeat;
+  background: url(../img/leaf-grey-reviews.png) left bottom -10.625rem no-repeat;
   position: relative;
   &:after {
-    content: url(/img/berries2.png);
+    content: url(../img/berries2.png);
     position: absolute;
     bottom: -6.4375rem;
     left: 0;
   }
   &:before {
-    content: url(/img/strawberry.png);
+    content: url(../img/strawberry.png);
     position: absolute;
     top: 3.125rem;
     right: 0;
@@ -162,19 +162,19 @@ h3 {
   }
 }
 .delivery-section {
-  background: #d3ddd9 url(/img/pattern-delivery.png);
+  background: #d3ddd9 url(../img/pattern-delivery.png);
   background-size: cover;
   position: relative;
   @media screen and (min-width: $tablets){
     &:before {
       position: absolute;
-      content: url(/img/berry-delivery.png);
+      content: url(../img/berry-delivery.png);
       bottom: 4.6875rem;
       left: 8.9375rem;
     }
     &:after {
       position: absolute;
-      content: url(/img/leaf-delivery.png);
+      content: url(../img/leaf-delivery.png);
       bottom: 4.6875rem;
       right: 1.875rem;
     }

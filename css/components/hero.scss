@@ -24,7 +24,7 @@
 }
 @media screen and (min-width: $tablets) {
   &:after {
-    content: url(/img/berries.png);
+    content: url(../img/berries.png);
     position: absolute;
     right: 8.75rem;
     bottom: -3.375rem;
