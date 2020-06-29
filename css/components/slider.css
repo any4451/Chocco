@@ -1,0 +1,9 @@
+.slider-section {
+  background: #f8faf9;
+}
+
+.slider__title {
+  font-size: 36px;
+  color: #000;
+  text-transform: uppercase;
+}

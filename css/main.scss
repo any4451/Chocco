@@ -1,12 +1,5 @@
 html {
   box-sizing: border-box;
-  font-size: $baseFontSize;
-  @include tablets {
-    font-size: $baseFontSize - 1px;
-  }
-  @include phones {
-    font-size: $baseFontSize - 2px;
-  }
   height: 100%;
 }
 *,
@@ -30,6 +23,7 @@ div {
 }
 body {
   height: 100%;
+  font-size: 18px;
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #666;
@@ -115,7 +109,7 @@ h3 {
   font-size: 1.3125rem;
   margin-bottom: 2rem;
   @include tablets {
-    padding: 0 25%;
+    padding: 0 26%;
     margin-bottom: 1.4375rem;
   }
   @include phones {
@@ -196,3 +190,4 @@ h3 {
 .contacts-section {
   position: relative;
 }
+
