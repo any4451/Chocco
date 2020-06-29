@@ -1,12 +1,6 @@
 .advantages-section {
   @media screen and (min-width: $phones) {
     background: url(../img/leaf-grey.png) center left no-repeat;
-    &:after {
-      content: url(../img/rasberry.png);
-      position: absolute;
-      bottom: -7.5rem;
-      left: 0;
-    }
   }
   @include tablets {
     background-position: top 4.625rem left;

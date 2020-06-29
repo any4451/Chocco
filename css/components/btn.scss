@@ -26,6 +26,10 @@
       color: $green;
     }
   }
+  &--hover--green:hover {
+    background: #365a49;
+    color: #fff;
+  }
   &--theme--trans {
     text-transform: capitalize;
     color: #000;

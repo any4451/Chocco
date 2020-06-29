@@ -1,5 +1,4 @@
 $green: #0b4d3c;
-$baseFontSize: 18px;
 //breakpoints
 $tablets: 769px;
 $phones: 481px;
@@ -14,6 +13,7 @@ $phones: 481px;
 @import "components/features";
 @import "components/btn";
 @import "components/advantages";
+@import "components/slider";
 @import "components/reviews";
 @import "components/form";
 @import "components/fixed-menu";
