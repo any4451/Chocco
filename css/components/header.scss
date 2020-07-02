@@ -13,10 +13,17 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  @include tablets {
+    flex-direction: column;
+    justify-content: space-around;
+  }
   .menu__item {
     margin-right: 1.6875rem;
     white-space: nowrap;
     margin-bottom: 0.625rem;
+    @include tablets {
+      margin: 0;
+    }
   }
   .menu__item:last-child {
     margin-right: 0;
@@ -26,8 +33,23 @@
   padding-top: 7px;
   margin: 0 15px;
   @include tablets {
-    display: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    right: -100vw;
+    transition: all 0.5s;
+    opacity: 0.9;
+    background: #61c4d9;
   }
+}
+.menu--active {
+  right: 0;
 }
 .phone {
   display: flex;
@@ -53,19 +75,53 @@
 .phone__icon--green {
   fill: $green;
 }
-.hamburger {
+.burger {
+  cursor: pointer;
   width: 24px;
   height: 20px;
-  flex-direction: column;
-  justify-content: space-between;
   display: none;
+  z-index: 30;
+  background-color: transparent;
   @include tablets {
-    display: inline-flex;
+    display: block;
+  }
+  span {
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: 4px;
+    width: 24px;
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+  span:before,
+  span:after {
+    content: "";
+    top: 10px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+  span:after {
+    top: 20px;
   }
 }
-.hamburger__plank {
-  display: block;
-  background: #fff;
-  height: 4px;
-  border-radius: 10px;
+.burger--active {
+  position: fixed;
+  right: 15px;
+}
+.burger--active span {
+  background: transparent;
+}
+.burger--active span:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.burger--active span:before {
+  top: 0;
+  transform: rotate(45deg);
 }
