@@ -1,6 +1,12 @@
 html {
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: $baseFontSize;
+  @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+  @include phones {
+    font-size: $baseFontSize - 2px;
+  }
   height: 100%;
 }
 *,
@@ -26,7 +32,6 @@ body {
   height: 100%;
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 18px;
   color: #666;
   background: #fff;
   line-height: 1.2;
@@ -58,101 +63,136 @@ footer {
 .wrapper {
   position: relative;
   width: 100%;
-  // min-width: $containerWidth + 20px;
   min-height: 100%;
   overflow: hidden;
 }
 .container {
+  width: 95%;
   margin: 0 auto;
   max-width: 940px;
+  position: relative;
 }
 h1 {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
+  @include phones {
+    font-size: 2.5rem;
+    line-height: 0.9;
+  }
 }
 h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 700;
 }
 h3 {
-  font-size: 27px;
+  font-size: 1.6875rem;
   font-weight: 700;
 }
 .offer {
   width: 37%;
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:before {
+      content: '';
+      margin-bottom: 0.625rem;
+      width: 19.75rem;
+      height: 20.625rem;
+      background: url(../img/hero-tablet.png) center center / contain no-repeat;
+    }
+  }
 }
 .offer__title {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 .offer__text {
-  font-size: 21px;
-  margin-bottom: 32px;
+  font-size: 1.3125rem;
+  margin-bottom: 2rem;
+  @include tablets {
+    padding: 0 25%;
+    margin-bottom: 1.4375rem;
+  }
+  @include phones {
+    padding: 0 10%;
+  }
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-}
-.advantages-section {
-  background: url(../img/leaf-grey.png) center left no-repeat;
-  &:after {
-    content: url(../img/rasberry.png);
-    position: absolute;
-    bottom: -120px;
-    left: 0;
+  @include tablets {
+    min-height: 1000px;
   }
-}
-.headline {
-  width: 45%;
-  text-align: center;
-  margin: 0 auto 56px;
+  @include phones {
+    min-height: 800px;
+  }
 }
 .section__title {
   color: #000;
   text-align: center;
+  margin-bottom: 0.625rem;
 }
 .reviews-section {
-  background: url(/img/leaf-grey-reviews.png) left bottom -170px no-repeat;
+  background: url(../img/leaf-grey-reviews.png) left bottom -10.625rem no-repeat;
   position: relative;
   &:after {
-    content: url(/img/berries2.png);
+    content: url(../img/berries2.png);
     position: absolute;
-    bottom: -103px;
+    bottom: -6.4375rem;
     left: 0;
   }
   &:before {
-    content: url(/img/strawberry.png);
+    content: url(../img/strawberry.png);
     position: absolute;
-    top: 50px;
+    top: 3.125rem;
     right: 0;
+    @include phones {
+    top: 0;
+    }
   }
 }
 .delivery-section {
-  background: #d3ddd9 url(/img/pattern-delivery.png);
+  background: #d3ddd9 url(../img/pattern-delivery.png);
   background-size: cover;
   position: relative;
-  &:before {
-    position: absolute;
-    content: url(/img/berry-delivery.png);
-    bottom: 75px;
-    left: 143px;
-  }
-  &:after {
-    position: absolute;
-    content: url(/img/leaf-delivery.png);
-    bottom: 75px;
-    right: 126px;
+  @media screen and (min-width: $tablets){
+    &:before {
+      position: absolute;
+      content: url(../img/berry-delivery.png);
+      bottom: 4.6875rem;
+      left: 8.9375rem;
+    }
+    &:after {
+      position: absolute;
+      content: url(../img/leaf-delivery.png);
+      bottom: 4.6875rem;
+      right: 1.875rem;
+    }
   }
 }
 .delivery__title {
   color: $green;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 3.125rem;
+  @include tablets {
+    margin-bottom: 1.5625rem;
+  }
 }
-
-
+.map {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.contacts-section {
+  position: relative;
+}

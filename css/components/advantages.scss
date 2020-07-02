@@ -1,5 +1,41 @@
+.advantages-section {
+  @media screen and (min-width: $phones) {
+    background: url(../img/leaf-grey.png) center left no-repeat;
+    &:after {
+      content: url(../img/rasberry.png);
+      position: absolute;
+      bottom: -7.5rem;
+      left: 0;
+    }
+  }
+  @include tablets {
+    background-position: top 4.625rem left;
+  }
+  @include phones {
+    background: none;
+  }
+}
+.headline {
+  width: 45%;
+  text-align: center;
+  margin: 0 auto 3.5rem;
+  @include tablets {
+    width: 61%;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
 .advantages {
   display: flex;
+  @include phones {
+    flex-direction: column;
+  }
+}
+.headline {
+  @include phones {
+    margin-top: 3.125rem;
+  }
 }
 .advantage {
   text-align: center;
@@ -17,35 +53,50 @@
   }
   &:after {
     position: absolute;
-    content: url(/img/decor-separator.png);
-    top: 50px;
+    content: url(../img/decor-separator.png);
+    top: 3.125rem;
     right: 0;
     transform: translate(50%);
   }
+  &:after {
+    @include tablets {
+      display: none;
+    }
+  }
+  @include phones {
+    padding: 0;
+    display: flex;
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
 }
 .advantage__pic {
-    margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+  @include phones {
+    margin-bottom: 0;
+    margin-right: 0.9375rem;
+  }
 }
 .advantage__pic-wrap {
-    display: block;
-    margin: 0 auto;
-    width: 126px;
-    height: 126px;
-    position: relative;
-    background: #f2f5f4;
-    border-radius: 50%;
-    overflow: hidden;
-    img {
-        width: 70px;
-        height: 70px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        filter: brightness(0.2);
-    }
+  display: block;
+  margin: 0 auto;
+  width: 7.875rem;
+  height: 7.875rem;
+  position: relative;
+  background: #f2f5f4;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 4.375rem;
+    height: 4.375rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.2);
+  }
 }
 .advantage__title {
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 1.125rem;
 }
