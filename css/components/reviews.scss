@@ -1,29 +1,39 @@
 .section__title-review {
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 20;
 }
 .reviews__display {
   display: flex;
+  position: relative;
   margin-bottom: 1.25rem;
-}
-.review {
+  min-height: 18.125rem;
   background: url(../img/decor-review.png) right top no-repeat;
   background-color: #f8faf9;
-  display: flex;
   padding: 3.125rem 2.8125rem 2.125rem;
-  position: relative;
-  overflow: hidden;
   &::before {
     content: "";
     position: absolute;
     width: 5.625rem;
     height: 5.625rem;
-    top: -4.0625rem;
+    top: -3.4375rem;
     left: 50%;
     transform: translateX(-50%);
     display: block;
     border-radius: 100%;
     background: #fff;
   }
+}
+.review {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.3s;
+  overflow: hidden;
   @include tablets {
     flex-direction: column;
     text-align: center;
@@ -31,20 +41,34 @@
     padding: 3.125rem 0.9375rem 2.125rem;
   }
 }
+.review.active {
+  display: flex;
+  position: static;
+  opacity: 1;
+}
 .review__avatar {
   width: 16rem;
   height: 16.25rem;
   margin-right: 2%;
+  overflow: hidden;
   img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+  .review__avatar--scale {
+    object-position: -53px 33px;
+    transform: scale(2);
   }
   @include tablets {
     width: 129px;
     height: 129px;
     margin-right: 0;
     margin-bottom: 1.75rem;
+    .review__avatar--scale {
+      transform: scale(1);
+      object-position: -32px 0px;
+    }
   }
 }
 .review__content {
@@ -67,28 +91,31 @@
   color: #000;
   font-weight: 600;
 }
-
 .reviews__switcher {
   display: flex;
   justify-content: center;
 }
-.review-switcher__link {
-  display: block;
+.review-switcher {
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
   border: 6px solid transparent;
   overflow: hidden;
+  &:hover {
+    border: 6px solid $green;
+  }
+  @include phones {
+    width: 4.0625rem;
+    height: 4.0625rem;
+  }
+}
+.review-switcher__link {
   img {
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
-  &--active {
-    border: 6px solid $green;
-  }
-  @include phones {
-  width: 4.0625rem;
-  height: 4.0625rem;
-  }
+}
+.review-switcher.active {
+  border: 6px solid $green;
 }

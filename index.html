@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chocco</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -139,88 +141,328 @@
             </section>
             <section class="section slider-section">
                 <div class="container slider-container">
-                    <ul class="slider">
-                        <li class="slider__item">
-                            <a class="arrow" href="#">
+                    <div class="slider-area">
+                        <div class="slider-btns">
+                            <a class="slider-btn slider-btn--left" href="#">
                                 <img src="./img/icons/arrow-left.png" alt="arrow">
                             </a>
-                            <div class="slider__pic">
-                                <img src="./img/bars_slider.png" alt="Granola + Grape bars">
-                            </div>
-                            <div class="slider__content">
-                                <a class="slider__option" href="#">
-                                    <svg viewBox="0 0 442.326 442.326" class="slider__icon">
-                                        <use xlink:href="./img/sprite.svg#chocolate-bar"></use>
-                                    </svg>
-                                    состав
-                                </a>
-                                <h2 class="slider__title"> Батончик “Гранола
-                                    виноград”</h2>
-                                <div class="slider__text">
-                                    <p>
-                                        Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят:
-                                        сухое молоко, заменитель сахара и какао бобы.
-                                    </p>
-                                </div>
-                                <ul class="slider__desc">
-                                    <li class="slider__desc-item">
-                                        Калорийность
-                                        <span>110 ккал</span>
-                                    </li>
-                                    <li class="slider__desc-item">
-                                        Вес
-                                        <span>95 грамм</span>
-                                    </li>
-                                </ul>
-                                <div class="slider__btn">
-                                    <div class="slider__price"> 140 ₽ </div>
-                                    <a class="btn btn--theme--green btn--hover--green" href="#">ЗАКАЗАТЬ</a>
-                                </div>
-                            </div>
-                            <a class="arrow" href="#">
+                            <a class="slider-btn slider-btn--right" href="#">
                                 <img src="./img/icons/arrow-right.png" alt="arrow">
                             </a>
+                        </div>
+                        <ul class="slider">
+                            <li class="slider__item">
+                                <div class="slider__pic">
+                                    <img src="./img/bars_slider.png" alt="Granola + Grape bars">
+                                </div>
+                                <div class="slider__content">
+                                    <div class="option">
+                                        <svg viewBox="0 0 442.326 442.326" class="option__icon">
+                                            <use xlink:href="./img/sprite.svg#chocolate-bar"></use>
+                                        </svg>
+                                        состав
+                                    </div>
+                                    <div class="option__open">
+                                        <ul class="option-list">
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 -4 511.99686 511">
+                                                        <use xlink:href="./img/sprite.svg#grape"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Виноград</div>
+                                                <div class="option-item__weight">25 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 498.613 498.613">
+                                                        <use xlink:href="./img/sprite.svg#nut"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Грецкий орех</div>
+                                                <div class="option-item__weight">32 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 -4 511.99686 511">
+                                                        <use xlink:href="./img/sprite.svg#almond"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Кунжутное семя</div>
+                                                <div class="option-item__weight">20 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 511 511">
+                                                        <use xlink:href="./img/sprite.svg#powder"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Сухое молоко</div>
+                                                <div class="option-item__weight">10 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 60 60">
+                                                        <use xlink:href="./img/sprite.svg#apitherapy"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Зам. сахара</div>
+                                                <div class="option-item__weight">4 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 512.001 512.001">
+                                                        <use xlink:href="./img/sprite.svg#beans"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Какао бобы</div>
+                                                <div class="option-item__weight">4 г</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h2 class="slider__title"> Батончик “Гранола
+                                        виноград”</h2>
+                                    <div class="slider__text">
+                                        <p>
+                                            Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также
+                                            входят:
+                                            сухое молоко, заменитель сахара и какао бобы.
+                                        </p>
+                                    </div>
+                                    <ul class="slider__desc">
+                                        <li class="slider__desc-item">
+                                            Калорийность
+                                            <span>110 ккал</span>
+                                        </li>
+                                        <li class="slider__desc-item">
+                                            Вес
+                                            <span>95 грамм</span>
+                                        </li>
+                                    </ul>
+                                    <div class="slider__btn">
+                                        <div class="slider__price"> 140 ₽ </div>
+                                        <a class="btn btn--theme--green btn--hover--green" href="#">ЗАКАЗАТЬ</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider__item">
+                                <div class="slider__pic">
+                                    <img src="./img/bars_slider2.png" alt="Seaweed + Granola bars">
+                                </div>
+                                <div class="slider__content">
+                                    <div class="option">
+                                        <svg viewBox="0 0 442.326 442.326" class="option__icon">
+                                            <use xlink:href="./img/sprite.svg#chocolate-bar"></use>
+                                        </svg>
+                                        состав
+                                    </div>
+                                    <div class="option__open">
+                                        <ul class="option-list">
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="-85 0 512 512.00159">
+                                                        <use xlink:href="./img/sprite.svg#oat"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Овёс</div>
+                                                <div class="option-item__weight">25 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 512 512">
+                                                        <use xlink:href="./img/sprite.svg#seaweed"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Мор. водоросли</div>
+                                                <div class="option-item__weight">15 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 -4 511.99686 511">
+                                                        <use xlink:href="./img/sprite.svg#almond"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Миндаль</div>
+                                                <div class="option-item__weight">20 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 511 511">
+                                                        <use xlink:href="./img/sprite.svg#powder"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Сухое молоко</div>
+                                                <div class="option-item__weight">10 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="-34 0 511 511.9962">
+                                                        <use xlink:href="./img/sprite.svg#seeds"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Тыкв. семечки</div>
+                                                <div class="option-item__weight">20 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 60 60">
+                                                        <use xlink:href="./img/sprite.svg#apitherapy"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Зам. сахара</div>
+                                                <div class="option-item__weight">4 г</div>
+                                            </li>
+                                            <li class="option-item">
+                                                <div class="option-item__icon">
+                                                    <svg viewBox="0 0 512.001 512.001">
+                                                        <use xlink:href="./img/sprite.svg#beans"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="option-item__name">Какао бобы</div>
+                                                <div class="option-item__weight">4 г</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h2 class="slider__title"> Батончик “Морские
+                                        водоросли” </h2>
+                                    <div class="slider__text">
+                                        <p>
+                                            Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В
+                                            состав
+                                            также входят: сухое молоко, заменитель сахара и какао бобы.
+                                        </p>
+                                    </div>
+                                    <ul class="slider__desc">
+                                        <li class="slider__desc-item">
+                                            Калорийность
+                                            <span>120 ккал</span>
+                                        </li>
+                                        <li class="slider__desc-item">
+                                            Вес
+                                            <span>98 грамм</span>
+                                        </li>
+                                    </ul>
+                                    <div class="slider__btn">
+                                        <span class="slider__price"> 140 ₽ </span>
+                                        <a class="btn btn--theme--green btn--hover--green" href="#">ЗАКАЗАТЬ</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section team-section">
+                <div class="container">
+                    <h1 class="section__title section__title-team">
+                        Команда
+                    </h1>
+                    <ul class="team team--version--desktop">
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="/img/avatar_Boris.jpg" alt="member photo">
+                            </div>
+                            <a class="team__name" href="#">Борис Федоров </a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__position">Оператор</div>
+                                    <div class="team__about"> С радостью поможет подобрать батончики и
+                                        оформить заказ. </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="slider__item">
-                            <a class="arrow" href="#">
-                                <img src="./img/icons/arrow-left.png" alt="arrow">
-                            </a>
-                            <div class="slider__pic">
-                                <img src="./img/bars_slider2.png" alt="Seaweed + Granola bars">
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="/img/avatar_Alla.jpg" alt="member photo">
                             </div>
-                            <div class="slider__content">
-                                <a class="slider__option" href="#">
-                                    <svg viewBox="0 0 442.326 442.326" class="slider__icon">
-                                        <use xlink:href="./img/sprite.svg#chocolate-bar"></use>
-                                    </svg>
-                                    состав
-                                </a>
-                                <h2 class="slider__title"> Батончик “Морские
-                                    водоросли” </h2>
-                                <div class="slider__text">
-                                    <p>
-                                        Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав
-                                        также входят: сухое молоко, заменитель сахара и какао бобы.
-                                    </p>
-                                </div>
-                                <ul class="slider__desc">
-                                    <li class="slider__desc-item">
-                                        Калорийность
-                                        <span>120 ккал</span>
-                                    </li>
-                                    <li class="slider__desc-item">
-                                        Вес
-                                        <span>98 грамм</span>
-                                    </li>
-                                </ul>
-                                <div class="slider__btn">
-                                    <span class="slider__price"> 140 ₽ </span>
-                                    <a class="btn btn--theme--green btn--hover--green" href="#">ЗАКАЗАТЬ</a>
+                            <a class="team__name" href="#">Алла Иванова</a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__position">Оператор</div>
+                                    <div class="team__about"> С радостью поможет подобрать батончики и оформить
+                                        заказ. </div>
                                 </div>
                             </div>
-                            <a class="arrow" href="#">
-                                <img src="./img/icons/arrow-right.png" alt="arrow">
-                            </a>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="/img/avatar_Kirill.jpg" alt="member photo">
+                            </div>
+                            <a class="team__name" href="#">Кирилл Матросов</a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__position">Оператор</div>
+                                    <div class="team__about"> С радостью поможет подобрать батончики и оформить
+                                        заказ. </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="/img/avatar_Mila.jpg" alt="member photo">
+                            </div>
+                            <a class="team__name" href="#">Мила Рыжкова</a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__position">PR, маркетинг</div>
+                                    <div class="team__about"> По всем вопросам сотрудничества и рекламы. </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- mobile -->
+                    <ul class="team team--version--mobile">
+                        <li class="team__item">
+                            <a class="team__name" href="#">Борис Федоров </a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="/img/avatar_Boris.jpg" alt="member photo">
+                                    </div>
+                                    <div class="team__position">Оператор</div>
+                                    <div class="team__about"> С радостью поможет подобрать батончики и
+                                        оформить заказ. </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+
+                            <a class="team__name" href="#">Алла Иванова</a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="/img/avatar_Alla.jpg" alt="member photo">
+                                    </div>
+                                    <div class="team__position">Оператор</div>
+                                    <div class="team__about"> С радостью поможет подобрать батончики и оформить
+                                        заказ. </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <a class="team__name" href="#">Кирилл Матросов</a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="/img/avatar_Kirill.jpg" alt="member photo">
+                                    </div>
+                                    <div class="team__position">Оператор</div>
+                                    <div class="team__about"> С радостью поможет подобрать батончики и оформить
+                                        заказ. </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <a class="team__name" href="#">Мила Рыжкова</a>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="/img/avatar_Mila.jpg" alt="member photo">
+                                    </div>
+                                    <div class="team__position">PR, маркетинг</div>
+                                    <div class="team__about"> По всем вопросам сотрудничества и рекламы. </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -232,7 +474,7 @@
                     </h1>
                     <div class="reviews">
                         <ul class="reviews__display">
-                            <li class="review">
+                            <li class="review active" >
                                 <div class="review__avatar">
                                     <img src="./img/photo1.jpg" alt="girl">
                                 </div>
@@ -255,20 +497,61 @@
                                     </div>
                                 </article>
                             </li>
+                            <li class="review">
+                                <div class="review__avatar">
+                                    <img class="review__avatar--scale" src="./img/photo3.jpg" alt="girl">
+                                </div>
+                                <article class="review__content">
+                                    <h2 class="review__title">Лучшие батончики премиум уровня</h2>
+                                    <div class="review__text">
+                                        <p>
+                                            Батончики понравились. На мой взгляд слегка завышена цена по сравнению с
+                                            конкурентами, однако, как говорится – оно того стоит. Нравится носить с
+                                            собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют
+                                            голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем
+                                            минус.
+
+                                        </p>
+                                    </div>
+                                    <div class="review__name">
+                                        Мария Орлова
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="review">
+                                <div class="review__avatar">
+                                    <img class="review__avatar--scale" src="./img/photo2.jpg" alt="boy">
+                                </div>
+                                <article class="review__content">
+                                    <h2 class="review__title">Идеально подходят для спортсменов</h2>
+                                    <div class="review__text">
+                                        <p>
+                                            После тренировок всегда хочется быстро закинуться чем-то белковым, потому
+                                            что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики
+                                            всегда выручают в этом плане. Спасибо производителю за этот качественный и
+                                            экологичный продукт.
+
+                                        </p>
+                                    </div>
+                                    <div class="review__name">
+                                        Вадим Грачев
+                                    </div>
+                                </article>
+                            </li>
                         </ul>
                         <ul class="reviews__switcher">
-                            <li class="review-switcher">
-                                <a class="review-switcher__link review-switcher__link--active" href="">
+                            <li class="review-switcher active">
+                                <a class="review-switcher__link" href="#">
                                     <img src="./img/photo1.jpg" alt="girl">
                                 </a>
                             </li>
                             <li class="review-switcher">
-                                <a class="review-switcher__link" href="">
+                                <a class="review-switcher__link" href="#">
                                     <img src="./img/photo3.jpg" alt="girl">
                                 </a>
                             </li>
                             <li class="review-switcher">
-                                <a class="review-switcher__link" href="">
+                                <a class="review-switcher__link" href="#">
                                     <img src="./img/photo2.jpg" alt="guy">
                                 </a>
                             </li>
@@ -279,40 +562,41 @@
             <section class="section delivery-section">
                 <div class="container form-container">
                     <h1 class="delivery__title">Закажите доставку</h1>
-                    <form class="form">
+                    <form class="form" id="form">
+                        <input type="hidden" name="to" value="somewhere@mail.com">
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Имя</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" type="text" name="name">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Телефон</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" type="text" name="phone">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Улица</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" type="text" name="street">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Дом</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" type="text" name="house">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Корпус</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" type="text" name="block">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Квартира</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" type="text" name="apartment">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Этаж</div>
-                                    <input class="form__input" type="text">
+                                    <input class="form__input" type="text" name="floor">
                                 </label>
                             </div>
                         </div>
@@ -320,24 +604,24 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea class="form__input form__input--textarea" name="comment"></textarea>
                                 </label>
                             </div>
                             <div class="form__controls">
                                 <label class="radio">
-                                    <input class="radio__elem" type="radio" name="option">
+                                    <input class="radio__elem" type="radio" name="pay-option">
                                     <div class="radio__visible"></div>
                                     <div class="radio__title"> Потребуется сдача</div>
                                 </label>
                                 <label class="radio">
-                                    <input class="radio__elem" type="radio" name="option">
+                                    <input class="radio__elem" type="radio" name="pay-option">
                                     <div class="radio__visible"></div>
                                     <div class="radio__title"> Оплата по карте</div>
                                 </label>
                             </div>
                             <div class="form__controls">
                                 <label class="radio radio--checkbox">
-                                    <input class="radio__elem" type="checkbox">
+                                    <input class="radio__elem" type="checkbox" name="dont-disturb">
                                     <div class="radio__visible--checkbox">
                                         <svg viewBox="0 0 10.9 8.7" class='checkmark__icon'>
                                             <use xlink:href="./img/sprite.svg#checkmark"></use>
@@ -348,11 +632,22 @@
                                 </label>
                             </div>
                             <div class="form__btns">
-                                <button href="#" class="btn btn--theme--green" type="submit">ЗАКАЗАТЬ</button>
+                                <button href="#" class="btn btn--theme--green" id="sendButton"
+                                    type="submit">ЗАКАЗАТЬ</button>
                                 <button href="#" class="btn btn--theme--trans" type="reset">Очистить</button>
                             </div>
                         </div>
                     </form>
+                </div>
+                <div class="modal" id="modal">
+                    <div class="modal__container">
+                        <div class="modal__content">
+                            Сообщение отправлено
+                        </div>
+                        <div class="modal__button-container">
+                            <a class="btn app-close-modal btn--theme--green" href="#">Закрыть</a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section contacts-section">
@@ -439,6 +734,9 @@
             </li>
         </ul>
     </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
