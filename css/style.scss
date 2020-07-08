@@ -1,4 +1,5 @@
 $green: #0b4d3c;
+
 //breakpoints
 $tablets: 769px;
 $phones: 481px;
@@ -8,12 +9,14 @@ $phones: 481px;
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;600;700;800&display=swap&subset=cyrillic");
 @import "main";
+@import "components/modal";
 @import "components/hero";
 @import "components/header";
 @import "components/features";
 @import "components/btn";
 @import "components/advantages";
 @import "components/slider";
+@import "components/team";
 @import "components/reviews";
 @import "components/form";
 @import "components/fixed-menu";

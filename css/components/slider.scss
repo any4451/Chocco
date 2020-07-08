@@ -19,19 +19,32 @@
   max-width: 990px;
   overflow: hidden;
 }
+.slider-area {
+  display: flex;
+  justify-content: center;
+}
 .slider {
+  border: none;
   display: flex;
   position: relative;
-  right: 0;
+  // right: 0;
+}
+.bx-wrapper {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+  img {
+    margin: 0 auto;
+  }
 }
 .slider__item {
   display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
-  flex-shrink: 0;
+  // flex-shrink: 0;
   @include tablets {
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -39,14 +52,16 @@
   width: 50%;
   object-fit: contain;
   margin-right: 5%;
+  align-self: center;
   @include tablets {
-      width: 80%;
+    width: 80%;
     margin-bottom: 1.875rem;
     margin-right: 0;
   }
   @include phones {
-  margin-bottom: 0;
-}
+    margin-bottom: 0;
+    margin-right: 0;
+  }
 }
 .slider__content {
   display: flex;
@@ -59,10 +74,11 @@
     text-align: center;
   }
   @include phones {
-   width: 95%;
+    width: 95%;
   }
 }
-.slider__option {
+.option {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,21 +95,57 @@
   &:hover {
     background: #60aacc;
   }
+  &:hover ~ .option__open {
+    display: block;
+  }
   @include tablets {
     display: none;
   }
 }
-.slider__icon {
+.option__icon {
   width: 3.4375rem;
   height: 3.75rem;
   fill: #fff;
+}
+.option__open {
+  display: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.949);
+  width: 268px;
+  position: absolute;
+  top: 0;
+  right: 5.3125rem;
+}
+.option-list {
+  padding: 1.25rem 1.25rem 1.25rem 1.875rem;
+}
+.option-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+.option-item__icon {
+  width: 2.375rem;
+  height: 2.375rem;
+  fill: #363636;
+  text-align: center;
+  margin-right: 1.4375rem;
+}
+.option-item__name,
+.option-item__weight {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #363636;
+}
+.option-item__weight {
+  margin-left: auto;
 }
 .slider__title {
   font-size: 2.25rem;
   color: #000;
   text-transform: uppercase;
   margin-bottom: 0.8125rem;
-   @include tablets {
+  @include tablets {
     font-size: 1.875rem;
   }
 }
@@ -124,11 +176,11 @@
   }
 }
 .slider__btn {
-    display: flex;
-    flex-wrap: wrap;
-    @include tablets {
-      justify-content: center;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  @include tablets {
+    justify-content: center;
+  }
 }
 .slider__price {
   font-size: 3.75rem;
@@ -139,11 +191,15 @@
   font-weight: 300;
   margin-right: 5%;
 }
-.arrow {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @include tablets {
-    display: none;
+.slider-btn {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
   }
 }
