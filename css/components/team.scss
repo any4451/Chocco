@@ -54,17 +54,20 @@
   font-weight: 700;
   margin-bottom: 10px;
   position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    right: -16px;
-    top: 45%;
-    border: 5px solid transparent;
-    border-top: 5px solid $green;
-  }
   &--active .team__content {
       height: auto;
   }
+}
+.team__triangle {
+  position: absolute;
+  top: 45%;
+  right: -1.25rem;
+  border: 5px solid transparent;
+  border-top: 5px solid $green;
+  &.open {
+        transform: rotateX(180deg);
+        top: 25%;
+      }
 }
 .team__content {
   height: 0;

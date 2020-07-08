@@ -39,17 +39,21 @@ burger.addEventListener('click', function() {
       const contentBlock = container.find('.team__content');
       const textBlock = contentBlock.find('.team__content-block');
       const reqHeight = textBlock.height();
+      const triangle = container.find('.team__triangle');
 
       container.addClass('active');
       contentBlock.height(reqHeight);
+      triangle.addClass('open');
   };
 
   const closeEveryItem = (container) => {
    const items = container.find('.team__content');
    const itemContainer = container.find('.team__item');
+   const triangle = container.find('.team__triangle');
    
    itemContainer.removeClass('active');
    items.height(0);
+   triangle.removeClass('open');
   };
 
   $('.team__name').on('click', (e) => {
@@ -120,7 +124,8 @@ const validateFields = (form, fieldsArray) => {
 }
 $('.form').submit( e => {
   e.preventDefault();
-
+  
+  const body = $('body');
   const form = $(e.currentTarget);
   const name = form.find('[name = "name"]');
   const phone = form.find('[name = "phone"]');
@@ -157,10 +162,11 @@ $('.form').submit( e => {
         });
       }
     });
+    body.addClass('overflow');
   }
 });
 
-$('.app-close-modal').click( e => {
+$('.modal').click( e => {
    e.preventDefault();
 
    $.fancybox.close();
@@ -168,27 +174,34 @@ $('.app-close-modal').click( e => {
 
 
 
+////// FORM на js
 
-
-
-
-
-
-
-
-
-
-
-
-
+// const body = document.querySelector('body');
 // const form = document.querySelector('#form');
 // const sendButton = document.querySelector('#sendButton');
 // const modal = document.querySelector('#modal');
+// const content = modal.querySelector('.modal__content');
+// const phone = form.querySelector('phone');
+// const comment = form.querySelector('comment');
+// const to = form.querySelector('to');
+// const errorFields = form.querySelector('.input-error');
+
+
+// const validateForm = (form, fieldsArray) => {
+//   fieldsArray.forEach( field => {
+//   field.classList.remove('input-error');
+//   if (field.value === '') {
+//     field.classList.add('input-error');
+//   }
+// });
+// return errorFields.length === 0;
+// };
 
 // sendButton.addEventListener('click', e => {
 //     e.preventDefault();
+//     const isValid = validateForm(form, [name, phone, comment, to]);
 
-//     if(validateForm(form)) {
+//     if(isValid) {
 //       const xhr = new XMLHttpRequest();
 //       let data = new FormData();
 //       data.append('name', form.elements.name.value);
@@ -199,43 +212,22 @@ $('.app-close-modal').click( e => {
 //       xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
 //       xhr.send(data);
 //       xhr.addEventListener('load', () => {
-//         const content = modal.querySelector('modal__content');
-//         modal.classList.remove('open');
-//          success: data => {
-//              content.textContent(data.message);
-//              modal.classList.add('open');
-//       });
-//     }
-
-    
+//         modal.classList.add('open');
+//         body.classList.add('overflow');
+//         content.innerText = xhr.response.message;
+//     });
+//   };
+//   modal.addEventListener('click', closeModal);
 // });
 
-// function validateForm(form) {
-//   let valid = true;
-//   if (!validateField(form.elements.name)) {
-//       valid = false;
-//   }
-//   if (!validateField(form.elements.phone)) {
-//     valid = false;
-//   }
-//   if (!validateField(form.elements.street)) {
-//   valid = false;
-//   }
-//   if (!validateField(form.elements.house)) {
-//   valid = false;
-//   }
-//   if (!validateField(form.elements.house)) {
-//   valid = false;
-//   }
-//   return valid;
-// };
+// const closeModal = e => {
+//   e.preventDefault();
+//   modal.classList.remove('open');
+// }
 
-// function validateField(field) {
-//   field.nextElementSibling.textContent = field.validationMessage;
 
-//   return field.checkValidity();
 
-// };
+
 
   
   

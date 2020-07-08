@@ -1,3 +1,7 @@
+// .reviews-section {
+//   display: block;
+//   padding-top: 200px;
+// }
 .section__title-review {
   margin-bottom: 2rem;
   position: relative;
@@ -7,7 +11,7 @@
   display: flex;
   position: relative;
   margin-bottom: 1.25rem;
-  min-height: 18.125rem;
+  min-height: 23.75rem;
   background: url(../img/decor-review.png) right top no-repeat;
   background-color: #f8faf9;
   padding: 3.125rem 2.8125rem 2.125rem;
@@ -61,13 +65,13 @@
     transform: scale(2);
   }
   @include tablets {
-    width: 129px;
-    height: 129px;
+    width: 8.0625rem;
+    height: 8.0625rem;
     margin-right: 0;
     margin-bottom: 1.75rem;
     .review__avatar--scale {
       transform: scale(1);
-      object-position: -32px 0px;
+      object-position: -2rem 0rem;
     }
   }
 }

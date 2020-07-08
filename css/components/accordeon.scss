@@ -1,0 +1,43 @@
+.accordeon-section {
+  background: url(../img/accordeon-bars.png), #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    color: #fff;
+}
+.accordeon__trigger {
+  display: flex;
+  width: 100px;
+  background-color: #000;
+  background-size: cover;
+  background-position: left bottom;
+}
+.accordeon__list {
+    display: flex;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.accordeon__item {
+    height: 100%;
+    display: flex;
+}
+.accordeon__content {
+    width: 630px;
+    height: 100%;
+    padding: 50px 127px 27px 27px;
+    overflow: auto;
+    background-color: rgba(51, 53, 55, .93);
+}
+.accordeon__title {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+.accordeon__text{
+    font-size: 16px;
+    line-height: 24px;
+}

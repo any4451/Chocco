@@ -32,6 +32,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  &.overflow {
+    overflow: hidden;
+  }
 }
 ul li {
   list-style: none;
