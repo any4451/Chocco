@@ -1,11 +1,34 @@
-// .reviews-section {
-//   display: block;
-//   padding-top: 200px;
-// }
+.reviews-section {
+  position: relative;
+  &:after {
+    content: url(../img/berries_with_grey_leaf.png);
+    position: absolute;
+    bottom: -6.4375rem;
+    left: 0;
+    @include phones {
+      bottom: -12.4375rem;
+      left: -2.375rem;
+    }
+  }
+  &:before {
+    content: url(../img/strawberry.png);
+    position: absolute;
+    top: 3.125rem;
+    right: 0;
+    @include phones {
+    top: 0;
+    right: -3.75rem;
+    }
+  }
+}
 .section__title-review {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   position: relative;
   z-index: 20;
+  @include phones {
+    margin-top: 0.875rem;
+    margin-bottom: 0.875rem;
+  }
 }
 .reviews__display {
   display: flex;
@@ -15,6 +38,14 @@
   background: url(../img/decor-review.png) right top no-repeat;
   background-color: #f8faf9;
   padding: 3.125rem 2.8125rem 2.125rem;
+  @include tablets {
+    min-height: 33.125rem;
+  }
+  @include phones {
+    padding: 1.25rem 0 0.625rem;
+    min-height: 420px;
+    margin-bottom: 0.625rem;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -44,6 +75,9 @@
     align-items: center;
     padding: 3.125rem 0.9375rem 2.125rem;
   }
+  @include phones {
+    padding: 1.875rem 0 0.3125rem;
+  }
 }
 .review.active {
   display: flex;
@@ -61,7 +95,7 @@
     height: 100%;
   }
   .review__avatar--scale {
-    object-position: -53px 33px;
+    object-position: -3.3125rem 2.0625rem;
     transform: scale(2);
   }
   @include tablets {
@@ -73,6 +107,11 @@
       transform: scale(1);
       object-position: -2rem 0rem;
     }
+  }
+  @include phones {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-bottom: 0.75rem;
   }
 }
 .review__content {
@@ -87,9 +126,16 @@
   @include tablets {
     width: 100%;
   }
+  @include phones {
+    margin-bottom: 0.9375rem;
+    font-size: 1.5625rem;
+  }
 }
 .review__text {
   margin-bottom: 1.875rem;
+  @include phones {
+    margin-bottom: 0.9375rem;
+  }
 }
 .review__name {
   color: #000;
@@ -109,8 +155,8 @@
     border: 6px solid $green;
   }
   @include phones {
-    width: 4.0625rem;
-    height: 4.0625rem;
+    width: 3.4375rem;
+    height: 3.4375rem;
   }
 }
 .review-switcher__link {

@@ -2,18 +2,32 @@
   position: fixed;
   right: 3%;
   top: 20%;
-  z-index: 100;
+  z-index: 1000;
   @include tablets {
     display: none;
   }
+  &--shadowed {
+    .fixed-menu__link {
+      &:before {
+        background: #000;
+      }
+    }
+    .fixed-menu__item {
+      &--active,
+      &:hover {
+        .fixed-menu__link {
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
 }
-
 .fixed-menu__item {
   margin-bottom: 5px;
-  &--active {
+  &--active,
+  &:hover {
     .fixed-menu__link {
-      border-color: #fff;
-      border: 1px solid #666;
+      border: 1px solid #fff;
     }
   }
 }
@@ -21,20 +35,19 @@
   width: 16px;
   height: 16px;
   border: 1px solid transparent;
-  border-radius: 50%;
+  border-radius: 50px;
   display: block;
   position: relative;
   &:before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #fff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border: 1px solid #666;
-      transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
