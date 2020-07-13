@@ -18,6 +18,7 @@
   }
   @include phones {
     width: 100%;
+    margin: 0 auto 1.875rem;
   }
 }
 .advantages {
@@ -61,7 +62,7 @@
     padding: 0;
     display: flex;
     text-align: left;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.875rem;
   }
 }
 .advantage__pic {
@@ -88,6 +89,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     filter: brightness(0.2);
+  }
+  @include phones {
+      height: 6.25rem;
+      width: 6.25rem;
   }
 }
 .advantage__title {

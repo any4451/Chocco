@@ -21,8 +21,16 @@
     margin-right: 1.6875rem;
     white-space: nowrap;
     margin-bottom: 0.625rem;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid #fff;
+      transition: all .2s;
+    }
     @include tablets {
       margin: 0;
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
     }
   }
   .menu__item:last-child {
@@ -92,27 +100,26 @@
     height: 4px;
     width: 24px;
     border-radius: 10px;
-    transition: all 0.2s;
   }
   span:before,
   span:after {
     content: "";
-    top: 10px;
+    top: 0.625rem;
     display: block;
     position: absolute;
     width: 100%;
     height: 4px;
     background: #fff;
     border-radius: 10px;
-    transition: all 0.2s;
   }
   span:after {
-    top: 20px;
+    top: 1.25rem;
   }
 }
 .burger--active {
   position: fixed;
-  right: 15px;
+  right: 0.625rem;
+  top: 1.875rem;
 }
 .burger--active span {
   background: transparent;

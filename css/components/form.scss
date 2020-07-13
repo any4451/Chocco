@@ -21,6 +21,9 @@
 .form__row {
   display: flex;
   margin-bottom: 1.125rem;
+  @include phones {
+    margin-bottom: 0.5rem;
+  }
 }
 .form__block {
   width: 100%;
@@ -59,7 +62,6 @@
 }
 .form__controls {
   display: flex;
-  flex-wrap: wrap;
   @include phones {
     justify-content: center;
   }

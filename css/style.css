@@ -28,6 +28,7 @@ div {
 
 body {
   height: 100%;
+  width: 100%;
   font-size: 18px;
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -40,6 +41,11 @@ body {
 }
 body.overflow {
   overflow: hidden;
+}
+@media screen and (max-width: 481px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 ul li {
@@ -70,9 +76,9 @@ footer {
 
 .wrapper {
   position: relative;
-  width: 100%;
-  min-height: 100%;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -80,6 +86,12 @@ footer {
   margin: 0 auto;
   max-width: 940px;
   position: relative;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 0.6s;
+  will-change: transform;
 }
 
 h1 {
@@ -125,6 +137,11 @@ h3 {
     background: url(../img/hero-tablet.png) center center/contain no-repeat;
   }
 }
+@media screen and (max-width: 481px) {
+  .offer:before {
+    height: 40%;
+  }
+}
 
 .offer__title {
   margin-bottom: 0.3125rem;
@@ -147,7 +164,7 @@ h3 {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: flex;
   flex-direction: column;
@@ -161,7 +178,7 @@ h3 {
 }
 @media screen and (max-width: 481px) {
   .section {
-    min-height: 800px;
+    min-height: 568px;
   }
 }
 
@@ -169,28 +186,6 @@ h3 {
   color: #000;
   text-align: center;
   margin-bottom: 0.625rem;
-}
-
-.reviews-section {
-  background: url(../img/leaf-grey-reviews.png) left bottom -10.625rem no-repeat;
-  position: relative;
-}
-.reviews-section:after {
-  content: url(../img/berries2.png);
-  position: absolute;
-  bottom: -6.4375rem;
-  left: 0;
-}
-.reviews-section:before {
-  content: url(../img/strawberry.png);
-  position: absolute;
-  top: 3.125rem;
-  right: 0;
-}
-@media screen and (max-width: 481px) {
-  .reviews-section:before {
-    top: 0;
-  }
 }
 
 .delivery-section {
@@ -225,7 +220,6 @@ h3 {
 }
 
 .map {
-  border: none;
   height: 100%;
   width: 100%;
 }
@@ -346,10 +340,18 @@ h3 {
   margin-right: 1.6875rem;
   white-space: nowrap;
   margin-bottom: 0.625rem;
+  border-bottom: 1px solid transparent;
+}
+.menu__list .menu__item:hover {
+  border-bottom: 1px solid #fff;
+  transition: all 0.2s;
 }
 @media screen and (max-width: 769px) {
   .menu__list .menu__item {
     margin: 0;
+  }
+  .menu__list .menu__item:hover {
+    border-bottom: 1px solid transparent;
   }
 }
 .menu__list .menu__item:last-child {
@@ -430,27 +432,26 @@ h3 {
   height: 4px;
   width: 24px;
   border-radius: 10px;
-  transition: all 0.2s;
 }
 .burger span:before,
 .burger span:after {
   content: "";
-  top: 10px;
+  top: 0.625rem;
   display: block;
   position: absolute;
   width: 100%;
   height: 4px;
   background: #fff;
   border-radius: 10px;
-  transition: all 0.2s;
 }
 .burger span:after {
-  top: 20px;
+  top: 1.25rem;
 }
 
 .burger--active {
   position: fixed;
-  right: 15px;
+  right: 0.625rem;
+  top: 1.875rem;
 }
 
 .burger--active span {
@@ -570,6 +571,7 @@ h3 {
 @media screen and (max-width: 481px) {
   .headline {
     width: 100%;
+    margin: 0 auto 1.875rem;
   }
 }
 
@@ -620,7 +622,7 @@ h3 {
     padding: 0;
     display: flex;
     text-align: left;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.875rem;
   }
 }
 
@@ -653,6 +655,12 @@ h3 {
   transform: translate(-50%, -50%);
   filter: brightness(0.2);
 }
+@media screen and (max-width: 481px) {
+  .advantage__pic-wrap {
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
 
 .advantage__title {
   color: #000;
@@ -665,8 +673,13 @@ h3 {
 .slider-section:before {
   content: url(../img/berries_slider.png);
   position: absolute;
-  bottom: -16.25rem;
+  bottom: -15rem;
   right: 0;
+}
+@media screen and (max-width: 481px) {
+  .slider-section:before {
+    right: -3.75rem;
+  }
 }
 @media screen and (min-width: 481px) {
   .slider-section:after {
@@ -731,6 +744,7 @@ h3 {
   .slider__pic {
     margin-bottom: 0;
     margin-right: 0;
+    width: 60%;
   }
 }
 
@@ -791,7 +805,7 @@ h3 {
   display: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.949);
-  width: 268px;
+  width: 16.75rem;
   position: absolute;
   top: 0;
   right: 5.3125rem;
@@ -890,11 +904,16 @@ h3 {
   font-weight: 300;
   margin-right: 5%;
 }
+@media screen and (max-width: 481px) {
+  .slider__price {
+    font-size: 2.8125rem;
+  }
+}
 
 .slider-btn {
   margin: 0 auto;
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   top: 50%;
 }
 .slider-btn--left {
@@ -903,9 +922,44 @@ h3 {
 .slider-btn--right {
   right: 0;
 }
+@media screen and (max-width: 769px) {
+  .slider-btn {
+    top: 29%;
+  }
+  .slider-btn--left {
+    left: 4.375rem;
+  }
+  .slider-btn--right {
+    right: 4.375rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  .slider-btn {
+    top: 18%;
+  }
+  .slider-btn--left {
+    left: 0;
+  }
+  .slider-btn--right {
+    right: 0;
+  }
+  .slider-btn img {
+    width: 50%;
+  }
+}
+
+.team-container {
+  min-height: 41.875rem;
+}
+@media screen and (max-width: 481px) {
+  .team-container {
+    min-height: 35.5rem;
+  }
+}
 
 .section__title-team {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+  margin-top: 1.875rem;
 }
 
 .team {
@@ -946,19 +1000,26 @@ h3 {
 @media screen and (max-width: 769px) {
   .team__item {
     margin-right: 0;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
 }
 
 .team__member {
-  height: 288px;
+  height: 18rem;
   background-color: #f1f1f1;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .team__member img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 481px) {
+  .team__member {
+    height: 11.5rem;
+    width: 9.0625rem;
+    margin: 0 auto 1.25rem;
+  }
 }
 
 .team__name {
@@ -966,7 +1027,7 @@ h3 {
   color: #000;
   font-size: 1.3125rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   position: relative;
 }
 .team__name--active .team__content {
@@ -989,7 +1050,7 @@ h3 {
   height: 0;
   transition: height 0.3s;
   overflow: hidden;
-  width: 220px;
+  width: 13.75rem;
 }
 
 .team__position {
@@ -1007,53 +1068,139 @@ h3 {
   position: relative;
   color: #fff;
 }
+.accordeon-section::before {
+  content: url(../img/rasberry-one.png);
+  position: absolute;
+  top: -4.375rem;
+  left: 2.375rem;
+}
+
+.section__title-menu {
+  display: flex;
+  margin-bottom: auto;
+  color: #fff;
+  margin-left: 4.375rem;
+  margin-top: 5.625rem;
+  z-index: 100;
+}
+.section__title-menu.active {
+  z-index: 0;
+}
 
 .accordeon__trigger {
   display: flex;
-  width: 100px;
+  width: 6.25rem;
   background-color: #000;
   background-size: cover;
-  background-position: left bottom;
+  background-position: bottom left -17.1875rem;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2.5rem;
+}
+@media screen and (max-width: 481px) {
+  .accordeon__trigger {
+    width: 4.6875rem;
+  }
 }
 
 .accordeon__list {
   display: flex;
+  justify-content: flex-end;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
 }
 
 .accordeon__item {
-  height: 100%;
   display: flex;
+}
+.accordeon__item.zero {
+  width: 0;
+}
+.accordeon__item.zero .accordeon__title {
+  display: none;
+}
+
+.accordeon__container {
+  padding: 2.5rem 3.75rem 1.6875rem 1.6875rem;
+  position: relative;
 }
 
 .accordeon__content {
-  width: 630px;
+  width: 0;
   height: 100%;
-  padding: 50px 127px 27px 27px;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(51, 53, 55, 0.93);
+  transition: 0.6s;
 }
 
 .accordeon__title {
   display: block;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   transform: rotate(-90deg);
   white-space: nowrap;
+  width: 100%;
+}
+@media screen and (max-width: 481px) {
+  .accordeon__title {
+    font-size: 2.5rem;
+  }
 }
 
 .accordeon__text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.burger.burger--active.accordeon-close {
+  display: block;
+  position: absolute;
+  top: 1.5625rem;
+  right: 1.5625rem;
+  opacity: 0.702;
+}
+
+.reviews-section {
+  position: relative;
+}
+.reviews-section:after {
+  content: url(../img/berries_with_grey_leaf.png);
+  position: absolute;
+  bottom: -6.4375rem;
+  left: 0;
+}
+@media screen and (max-width: 481px) {
+  .reviews-section:after {
+    bottom: -12.4375rem;
+    left: -2.375rem;
+  }
+}
+.reviews-section:before {
+  content: url(../img/strawberry.png);
+  position: absolute;
+  top: 3.125rem;
+  right: 0;
+}
+@media screen and (max-width: 481px) {
+  .reviews-section:before {
+    top: 0;
+    right: -3.75rem;
+  }
 }
 
 .section__title-review {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   position: relative;
   z-index: 20;
+}
+@media screen and (max-width: 481px) {
+  .section__title-review {
+    margin-top: 0.875rem;
+    margin-bottom: 0.875rem;
+  }
 }
 
 .reviews__display {
@@ -1064,6 +1211,18 @@ h3 {
   background: url(../img/decor-review.png) right top no-repeat;
   background-color: #f8faf9;
   padding: 3.125rem 2.8125rem 2.125rem;
+}
+@media screen and (max-width: 769px) {
+  .reviews__display {
+    min-height: 33.125rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  .reviews__display {
+    padding: 1.25rem 0 0.625rem;
+    min-height: 420px;
+    margin-bottom: 0.625rem;
+  }
 }
 .reviews__display::before {
   content: "";
@@ -1097,6 +1256,11 @@ h3 {
     padding: 3.125rem 0.9375rem 2.125rem;
   }
 }
+@media screen and (max-width: 481px) {
+  .review {
+    padding: 1.875rem 0 0.3125rem;
+  }
+}
 
 .review.active {
   display: flex;
@@ -1116,7 +1280,7 @@ h3 {
   height: 100%;
 }
 .review__avatar .review__avatar--scale {
-  object-position: -53px 33px;
+  object-position: -3.3125rem 2.0625rem;
   transform: scale(2);
 }
 @media screen and (max-width: 769px) {
@@ -1129,6 +1293,13 @@ h3 {
   .review__avatar .review__avatar--scale {
     transform: scale(1);
     object-position: -2rem 0rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  .review__avatar {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -1150,9 +1321,20 @@ h3 {
     width: 100%;
   }
 }
+@media screen and (max-width: 481px) {
+  .review__title {
+    margin-bottom: 0.9375rem;
+    font-size: 1.5625rem;
+  }
+}
 
 .review__text {
   margin-bottom: 1.875rem;
+}
+@media screen and (max-width: 481px) {
+  .review__text {
+    margin-bottom: 0.9375rem;
+  }
 }
 
 .review__name {
@@ -1177,8 +1359,8 @@ h3 {
 }
 @media screen and (max-width: 481px) {
   .review-switcher {
-    width: 4.0625rem;
-    height: 4.0625rem;
+    width: 3.4375rem;
+    height: 3.4375rem;
   }
 }
 
@@ -1190,6 +1372,224 @@ h3 {
 
 .review-switcher.active {
   border: 6px solid #0b4d3c;
+}
+
+.player-section {
+  position: relative;
+}
+.player-section:after {
+  position: absolute;
+  content: url(../img/blackberry-video.png);
+  bottom: -10rem;
+  right: 0;
+  z-index: -2;
+}
+
+.section__title-player {
+  margin-bottom: 1.25rem;
+}
+
+.player-section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.player-section__container::before {
+  position: absolute;
+  content: url(../img/leaf1.png);
+  left: -7.0625rem;
+  bottom: -3.4375rem;
+  z-index: 100;
+}
+.player-section__container::after {
+  position: absolute;
+  content: url(../img/leaf-player.png);
+  right: -5.0625rem;
+  top: -5rem;
+  z-index: 100;
+}
+
+.player {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 41.25rem;
+  height: 25.375rem;
+}
+@media screen and (max-width: 769px) {
+  .player {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 481px) {
+  .player {
+    max-height: 295px;
+  }
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .play__icon {
+  display: none;
+}
+.player.paused .player__start {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.player.paused .player__start:after, .player.paused .player__start:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.3125rem;
+  height: 1.4375rem;
+  background: #626262;
+}
+.player.paused .player__start:after {
+  right: 0.625rem;
+}
+.player.paused .player__start:before {
+  right: 0;
+}
+
+.player__elem {
+  width: 100%;
+  height: 100%;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  background: url(../img/Granola-Bars-splash.jpg) center center/cover no-repeat;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.1875rem;
+  background: #3e3e3e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.625rem;
+}
+@media screen and (max-width: 481px) {
+  .player__controls {
+    justify-content: space-between;
+  }
+}
+
+.player__start {
+  background: transparent;
+  cursor: pointer;
+  width: 1.125rem;
+  height: 1.4375rem;
+  border: none;
+  margin-right: 0.4375rem;
+}
+
+.play__icon {
+  min-width: 100%;
+  height: 100%;
+  fill: #626262;
+  vertical-align: middle;
+}
+
+.player__playback {
+  height: 1rem;
+  width: 55%;
+  position: relative;
+}
+@media screen and (max-width: 481px) {
+  .player__playback {
+    width: 30%;
+    margin-right: 0.5rem;
+  }
+}
+.player__playback:before {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  transform: translateY(-50%);
+}
+
+.volume__playback {
+  position: relative;
+  height: 1rem;
+  width: 3.75rem;
+  margin: 0 5px;
+}
+.volume__playback:before {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 481px) {
+  .volume__playback {
+    width: 2.5rem;
+  }
+}
+
+.player__playback-button,
+.volume__playback-button {
+  background: #626262;
+  border-radius: 50px;
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.volume__playback-button {
+  left: 100%;
+}
+
+.player__volume {
+  display: flex;
+  align-items: center;
+  margin-right: 0.625rem;
+}
+
+.volume__icon {
+  width: 1.25rem;
+  height: 1.4375rem;
+  fill: #626262;
+  vertical-align: middle;
+}
+
+.volume__nosound {
+  opacity: 0;
+}
+.volume__nosound--active {
+  opacity: 1;
+}
+
+.player__duration {
+  width: 7.5rem;
+  display: flex;
 }
 
 .form {
@@ -1223,6 +1623,11 @@ h3 {
 .form__row {
   display: flex;
   margin-bottom: 1.125rem;
+}
+@media screen and (max-width: 481px) {
+  .form__row {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .form__block {
@@ -1271,7 +1676,6 @@ h3 {
 
 .form__controls {
   display: flex;
-  flex-wrap: wrap;
 }
 @media screen and (max-width: 481px) {
   .form__controls {
@@ -1358,41 +1762,45 @@ h3 {
   position: fixed;
   right: 3%;
   top: 20%;
-  z-index: 100;
+  z-index: 1000;
 }
 @media screen and (max-width: 769px) {
   .fixed-menu {
     display: none;
   }
 }
+.fixed-menu--shadowed .fixed-menu__link:before {
+  background: #000;
+}
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link, .fixed-menu--shadowed .fixed-menu__item:hover .fixed-menu__link {
+  border: 1px solid #000;
+}
 
 .fixed-menu__item {
   margin-bottom: 5px;
 }
-.fixed-menu__item--active .fixed-menu__link {
-  border-color: #fff;
-  border: 1px solid #666;
+.fixed-menu__item--active .fixed-menu__link, .fixed-menu__item:hover .fixed-menu__link {
+  border: 1px solid #fff;
 }
 
 .fixed-menu__link {
   width: 16px;
   height: 16px;
   border: 1px solid transparent;
-  border-radius: 50%;
+  border-radius: 50px;
   display: block;
   position: relative;
 }
 .fixed-menu__link:before {
   content: "";
   display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
   background: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid #666;
   transform: translate(-50%, -50%);
 }
 

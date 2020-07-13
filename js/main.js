@@ -12,9 +12,7 @@ burger.addEventListener('click', function() {
   }
 });
 
-
-
-/// аккордеон team 
+/// ACCORDEON TEAM  
 
 
 // const teamList = document.querySelector('.team-list');
@@ -71,6 +69,96 @@ burger.addEventListener('click', function() {
     }
 
  });
+
+
+
+ 
+ /// ACCORDEON MENU
+const mesureWidth = item => {
+ let reqItemWidth = 0;
+ const screenWidth = $(window).width();
+ const container = item.closest('.accordeon__list');
+ const triggerBlocks = container.find('.accordeon__trigger');
+ const triggerWidthOne = triggerBlocks.width();
+ const triggerWidthAll = triggerBlocks.width() * triggerBlocks.length;
+ const textContainer = item.find('.accordeon__container');
+ const paddingLeft = parseInt(textContainer.css('padding-left'));
+ const paddingRight = parseInt(textContainer.css('padding-right'));
+
+ const isMobile = window.matchMedia('(max-width: 481px)').matches;
+ const isTablet = window.matchMedia('(min-width: 480px) and (max-width: 768px)').matches;
+
+
+if(isMobile) {
+  reqItemWidth = screenWidth - triggerWidthOne; 
+} else if (isTablet) {
+  reqItemWidth = screenWidth - triggerWidthAll;
+} else {
+  reqItemWidth = 530;
+}
+ 
+ return {
+   container: reqItemWidth,
+   textContainer: reqItemWidth - paddingLeft - paddingRight
+ }
+}
+
+const closeEveryItemInContainer = (container) => {
+const items = container.find('.accordeon__item');
+const content = container.find('.accordeon__content');
+const menuTitle = container.siblings('.section__title-menu');
+
+items.removeClass('active');
+content.width(0);
+menuTitle.removeClass('active');
+
+if(isMobile) {
+  const itemSiblings = items.siblings();
+  itemSiblings.removeClass('zero');
+}
+
+}
+
+const openItemAcc = (item) => {
+  const hiddenContent = item.find('.accordeon__content');
+  const reqWidth = mesureWidth(item);
+  const textBlock = item.find('.accordeon__container');
+  const container = item.closest('.accordeon__list');
+  const menuTitle = container.siblings('.section__title-menu');
+ 
+  item.addClass('active');
+  hiddenContent.width(reqWidth.container);
+  textBlock.width(reqWidth.textContainer);
+  menuTitle.addClass('active');
+
+  if(isMobile) {
+    const itemSiblings = item.siblings();
+    itemSiblings.addClass('zero');
+  }
+
+};
+
+$('.accordeon__trigger').click( (e) => {
+  e.preventDefault();
+ 
+  const $this = $(e.currentTarget);
+  const item = $this.closest('.accordeon__item');
+  const itemOpened = item.hasClass('active');
+  const container = $this.closest('.accordeon__list');
+
+  if(itemOpened) {
+     closeEveryItemInContainer(container);
+  } else {
+    closeEveryItemInContainer(container);
+    openItemAcc(item);
+  }
+});
+
+$('.accordeon-close').click( e => {
+  e.preventDefault();
+
+  closeEveryItemInContainer($('.accordeon__list'));
+});
 
 
 
@@ -226,8 +314,42 @@ $('.modal').click( e => {
 // }
 
 
+///////////  MAP
 
+let myMap;
 
+const init = () => {
+  var myMap = new ymaps.Map("map", {
+
+    center: [55.75, 37.64],
+    zoom: 17,
+    controls: []
+});
+
+const coords = [
+  [55.75, 37.641],
+  [55.75, 37.643],
+  [55.75, 37.647],
+  [55.75, 37.64]
+];
+
+const myCollection = new ymaps.GeoObjectCollection({}, {
+  draggable: false, // и их нельзя перемещать
+  iconLayout: 'default#image',
+  iconImageHref: './img/icons/marker.svg',
+  iconImageSize: [40, 42],
+  iconImageOffset: [-3, -42]
+});
+coords.forEach(coord => {
+  myCollection.add(new ymaps.Placemark(coord));
+});
+
+myMap.geoObjects.add(myCollection);
+myMap.behaviors.disable('scrollZoom');
+
+}
+
+ymaps.ready(init);
 
   
   

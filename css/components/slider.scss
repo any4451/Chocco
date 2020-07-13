@@ -3,8 +3,11 @@
   &:before {
     content: url(../img/berries_slider.png);
     position: absolute;
-    bottom: -16.25rem;
+    bottom: -15rem;
     right: 0;
+    @include phones {
+      right: -3.75rem;
+    }
   }
   @media screen and (min-width: $phones) {
     &:after {
@@ -61,6 +64,7 @@
   @include phones {
     margin-bottom: 0;
     margin-right: 0;
+    width: 60%;
   }
 }
 .slider__content {
@@ -111,7 +115,7 @@
   display: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.949);
-  width: 268px;
+  width: 16.75rem;
   position: absolute;
   top: 0;
   right: 5.3125rem;
@@ -190,16 +194,40 @@
   vertical-align: middle;
   font-weight: 300;
   margin-right: 5%;
+  @include phones {
+    font-size: 2.8125rem;
+  }
 }
 .slider-btn {
   margin: 0 auto;
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   top: 50%;
   &--left {
     left: 0;
   }
   &--right {
     right: 0;
+  }
+  @include tablets {
+    top: 29%;
+    &--left {
+      left: 4.375rem;
+    }
+    &--right {
+      right: 4.375rem;
+    }
+  }
+  @include phones {
+    top: 18%;
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+    img {
+      width: 50%;
+    }
   }
 }

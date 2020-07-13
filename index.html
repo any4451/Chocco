@@ -13,7 +13,7 @@
 <body>
     <div class="wrapper">
         <div class="maincontent">
-            <section class="section hero">
+            <section class="section hero" data-section-id='hero' data-sidemenu-theme='white'>
                 <div class="container hero-container">
                     <header class="header">
                         <a class="logo" href="/">
@@ -21,13 +21,13 @@
                         </a>
                         <nav class="menu">
                             <ul class="menu__list">
-                                <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Батончики</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Команда</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Меню</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Как мы работаем</a></li>
-                                <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link" data-scroll-to='advantages'>О нас</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link" data-scroll-to='slider'>Батончики</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link" data-scroll-to='team'>Команда</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link" data-scroll-to='accordeon'>Меню</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link" data-scroll-to='reviews'>Отзывы</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link" data-scroll-to='player'>Как мы работаем</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link" data-scroll-to='contacts'>Контакты</a></li>
                             </ul>
                         </nav>
                         <a class="phone header__phone" href="tel:88009039090">
@@ -46,7 +46,7 @@
                             Наши батончики идеально подходят для
                             тех, кто следит за своим здоровьем
                         </div>
-                        <a class="btn btn--theme--white" href="#">ЗАКАЗАТЬ</a>
+                        <a class="btn btn--theme--white" href="#" data-scroll-to='form'>ЗАКАЗАТЬ</a>
                     </div>
                     <div class="hero__features">
                         <ul class="features">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section advantages-section">
+            <section class="section advantages-section" data-section-id='advantages' data-sidemenu-theme='black'>
                 <div class="container">
                     <div class="headline">
                         <h1 class="section__title">почему chocco?</h1>
@@ -139,7 +139,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="section slider-section">
+            <section class="section slider-section" data-section-id='slider' data-sidemenu-theme='black'>
                 <div class="container slider-container">
                     <div class="slider-area">
                         <div class="slider-btns">
@@ -240,8 +240,8 @@
                                         </li>
                                     </ul>
                                     <div class="slider__btn">
-                                        <div class="slider__price"> 140 ₽ </div>
-                                        <a class="btn btn--theme--green btn--hover--green" href="#">ЗАКАЗАТЬ</a>
+                                        <span class="slider__price"> 140 ₽ </span>
+                                        <a class="btn btn--theme--green btn--hover--green" href="#" data-scroll-to='form'>ЗАКАЗАТЬ</a>
                                     </div>
                                 </div>
                             </li>
@@ -344,7 +344,7 @@
                                     </ul>
                                     <div class="slider__btn">
                                         <span class="slider__price"> 140 ₽ </span>
-                                        <a class="btn btn--theme--green btn--hover--green" href="#">ЗАКАЗАТЬ</a>
+                                        <a class="btn btn--theme--green btn--hover--green" href="#" data-scroll-to='form'>ЗАКАЗАТЬ</a>
                                     </div>
                                 </div>
                             </li>
@@ -352,8 +352,8 @@
                     </div>
                 </div>
             </section>
-            <section class="section team-section">
-                <div class="container">
+            <section class="section team-section" data-section-id='team' data-sidemenu-theme='black'>
+                <div class="container team-container">
                     <h1 class="section__title section__title-team">
                         Команда
                     </h1>
@@ -364,7 +364,7 @@
                             </div>
                             <a class="team__name" href="#">Борис Федоров
                                 <span class="team__triangle"></span>
-                             </a>
+                            </a>
                             <div class="team__content">
                                 <div class="team__content-block">
                                     <div class="team__position">Главный технолог</div>
@@ -425,7 +425,7 @@
                         <li class="team__item">
                             <a class="team__name" href="#">Борис Федоров
                                 <span class="team__triangle"></span>
-                             </a>
+                            </a>
                             <div class="team__content">
                                 <div class="team__content-block">
                                     <div class="team__member">
@@ -484,59 +484,80 @@
                     </ul>
                 </div>
             </section>
-            <section class="section accordeon-section">
+            <section class="section accordeon-section" data-section-id='accordeon' data-sidemenu-theme='white'>
+                <h1 class="section__title section__title-menu">
+                    Меню
+                </h1>
                 <ul class="accordeon__list">
                     <li class="accordeon__item">
-                        <a href="#" class="accordeon__trigger" style="background-image: url(./img/accordeon-coconut.png)">
+                        <a href="#" class="accordeon__trigger"
+                            style="background-image: url(./img/accordeon-coconut.png)">
                             <span class="accordeon__title">Батончики с молоком</span>
                         </a>
                         <div class="accordeon__content">
-                            <p class="accordeon__text">
-                                Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и
-                                вкуснее, и полезнее.
-                                Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как
-                                классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую
-                                еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить
-                                с днём Победы.
-                            </p>
-                        </div>
-
-                    </li>
-                    <!-- <li class="accordeon__item">
-                        <a href="#" class="accordeon__trigger" style="background-image: url(./img/accordeon-oranges.png)">
-                            <span class="accordeon__title">С мёдом и фруктами</span>            
-                           </a>
-                            <div class="accordeon__content">
+                            <div class="accordeon__container">
                                 <p class="accordeon__text">
                                     Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и
                                     вкуснее, и полезнее.
-                                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как
-                                    классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую
-                                    еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить
+                                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг.
+                                    Как
+                                    классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за
+                                    такую
+                                    еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю
+                                    поздравить
                                     с днём Победы.
                                 </p>
+                                <a href="#" class="burger burger--active accordeon-close"><span></span></a>
                             </div>
-         
+                        </div>
                     </li>
                     <li class="accordeon__item">
-                        <a href="#" class="accordeon__trigger" style="background-image: url(./img/accordeon-berries.png)">
-                            <span class="accordeon__title">Дикие ягоды</span>  
+                        <a href="#" class="accordeon__trigger"
+                            style="background-image: url(./img/accordeon-oranges.png)">
+                            <span class="accordeon__title">С мёдом и фруктами</span>
                         </a>
-                            <div class="accordeon__content">
+                        <div class="accordeon__content">
+                            <div class="accordeon__container">
                                 <p class="accordeon__text">
                                     Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и
                                     вкуснее, и полезнее.
-                                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как
-                                    классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую
-                                    еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить
+                                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг.
+                                    Как
+                                    классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за
+                                    такую
+                                    еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю
+                                    поздравить
                                     с днём Победы.
                                 </p>
+                                <a href="#" class="burger burger--active accordeon-close"><span></span></a>
                             </div>
-                       
-                    </li> -->
+                        </div>
+                    </li>
+                    <li class="accordeon__item">
+                        <a href="#" class="accordeon__trigger"
+                            style="background-image: url(./img/accordeon-berries.png)">
+                            <span class="accordeon__title">Дикие ягоды</span>
+                        </a>
+                        <div class="accordeon__content">
+                            <div class="accordeon__container">
+                                <p class="accordeon__text">
+                                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и
+                                    вкуснее, и полезнее.
+                                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг.
+                                    Как
+                                    классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за
+                                    такую
+                                    еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю
+                                    поздравить
+                                    с днём Победы.
+                                </p>
+                                <a href="#" class="burger burger--active accordeon-close"><span></span></a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </section>
-            <section class="section reviews-section">
+            <section class="section reviews-section" data-section-id='reviews' data-sidemenu-theme='black'>
                 <div class="container">
                     <h1 class="section__title section__title-review">
                         Отзывы
@@ -628,7 +649,43 @@
                     </div>
                 </div>
             </section>
-            <section class="section delivery-section">
+            <section class="section player-section" data-section-id='player' data-sidemenu-theme='black'>
+                <div class="container">
+                    <h1 class="section__title section__title-player">Как мы работаем</h1>
+                    <div class="player-section__container">
+                        <div class="player">
+                             <div class="player__wrapper">
+                             <div class="player__elem" id="yt-player"></div>
+                             <div class="player__splash"></div>
+                             </div>
+                             <div class="player__controls">
+                                <button class="player__start">
+                                    <svg viewBox="0 0 16 22" class='play__icon'>
+                                        <use xlink:href="./img/sprite.svg#play"></use>
+                                    </svg>
+                                </button>
+                                <div class="player__playback">
+                                  <button class="player__playback-button"></button>
+                                </div>
+                                <div class="player__volume">
+                                    <svg viewBox="0 0 18 22" class='volume__icon'>
+                                        <use xlink:href="./img/sprite.svg#volume"></use>
+                                    </svg>
+                                     <div class="volume__nosound">x</div>
+                                    <div class="volume__playback">
+                                        <button class="volume__playback-button"></button>
+                                    </div>
+                                </div>
+                                <div class="player__duration">
+                                  <span class="player__duration-completed">0:00</span> :
+                                  <span class="player__duration-estimate">0:00</span>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section delivery-section" data-section-id='form' data-sidemenu-theme='white'>
                 <div class="container form-container">
                     <h1 class="delivery__title">Закажите доставку</h1>
                     <form class="form" id="form">
@@ -636,35 +693,35 @@
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="form__block">
-                                    <div class="form__title">Имя</div>
+                                    <span class="form__title">Имя</span>
                                     <input class="form__input" type="text" name="name">
                                 </label>
                                 <label class="form__block">
-                                    <div class="form__title">Телефон</div>
+                                    <span class="form__title">Телефон</span>
                                     <input class="form__input" type="text" name="phone">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
-                                    <div class="form__title">Улица</div>
+                                    <span class="form__title">Улица</span>
                                     <input class="form__input" type="text" name="street">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
-                                    <div class="form__title">Дом</div>
+                                    <span class="form__title">Дом</span>
                                     <input class="form__input" type="text" name="house">
                                 </label>
                                 <label class="form__block">
-                                    <div class="form__title">Корпус</div>
+                                    <span class="form__title">Корпус</span>
                                     <input class="form__input" type="text" name="block">
                                 </label>
                                 <label class="form__block">
-                                    <div class="form__title">Квартира</div>
+                                    <span class="form__title">Квартира</span>
                                     <input class="form__input" type="text" name="apartment">
                                 </label>
                                 <label class="form__block">
-                                    <div class="form__title">Этаж</div>
+                                    <span class="form__title">Этаж</span>
                                     <input class="form__input" type="text" name="floor">
                                 </label>
                             </div>
@@ -672,38 +729,37 @@
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="form__block">
-                                    <div class="form__title">Комментарий</div>
+                                    <span class="form__title">Комментарий</span>
                                     <textarea class="form__input form__input--textarea" name="comment"></textarea>
                                 </label>
                             </div>
                             <div class="form__controls">
                                 <label class="radio">
                                     <input class="radio__elem" type="radio" name="pay-option">
-                                    <div class="radio__visible"></div>
-                                    <div class="radio__title"> Потребуется сдача</div>
+                                    <span class="radio__visible"></span>
+                                    <span class="radio__title"> Потребуется сдача</span>
                                 </label>
                                 <label class="radio">
                                     <input class="radio__elem" type="radio" name="pay-option">
-                                    <div class="radio__visible"></div>
-                                    <div class="radio__title"> Оплата по карте</div>
+                                    <span class="radio__visible"></span>
+                                    <span class="radio__title"> Оплата по карте</span>
                                 </label>
                             </div>
                             <div class="form__controls">
                                 <label class="radio radio--checkbox">
                                     <input class="radio__elem" type="checkbox" name="dont-disturb">
-                                    <div class="radio__visible--checkbox">
+                                    <span class="radio__visible--checkbox">
                                         <svg viewBox="0 0 10.9 8.7" class='checkmark__icon'>
                                             <use xlink:href="./img/sprite.svg#checkmark"></use>
                                         </svg>
-                                    </div>
-
-                                    <div class="radio__title">Не перезванивать</div>
+                                    </span>
+                                    <span class="radio__title">Не перезванивать</span>
                                 </label>
                             </div>
                             <div class="form__btns">
-                                <button href="#" class="btn btn--theme--green" id="sendButton"
+                                <button class="btn btn--theme--green" id="sendButton"
                                     type="submit">ЗАКАЗАТЬ</button>
-                                <button href="#" class="btn btn--theme--trans" type="reset">Очистить</button>
+                                <button class="btn btn--theme--trans" type="reset">Очистить</button>
                             </div>
                         </div>
                     </form>
@@ -719,10 +775,8 @@
                     </div>
                 </div>
             </section>
-            <section class="section contacts-section">
-                <iframe class="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3942316077078!2d37.57438143868434!3d55.75165355830855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bca115fd921%3A0xd4e38d7288daba61!2z0J3QvtCy0YvQuSDQkNGA0LHQsNGCINGD0LsuLCAzMSwg0JzQvtGB0LrQstCwLCAxMjEwOTk!5e0!3m2!1sru!2sru!4v1592233087732!5m2!1sru!2sru"
-                    allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <section class="section contacts-section" data-section-id='contacts' data-sidemenu-theme='black'>
+                <div id="map" class="map">   </div>
                 <footer class="footer">
                     <div class="container footer-container">
                         <div class="footer__col">
@@ -775,37 +829,43 @@
     <nav class="fixed-menu">
         <ul class="fixed-menu__list">
             <li class="fixed-menu__item fixed-menu__item--active">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='hero'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='advantages'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='slider'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='team'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='accordeon'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='reviews'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='player'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='form'></a>
             </li>
             <li class="fixed-menu__item">
-                <a class="fixed-menu__link" href=""></a>
+                <a class="fixed-menu__link" href="#" data-scroll-to='contacts'></a>
             </li>
         </ul>
     </nav>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./js/player.js"></script>
+    <script src='./js/ops.js'></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
