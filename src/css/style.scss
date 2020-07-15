@@ -1,0 +1,14 @@
+$green: #0b4d3c;
+
+//breakpoints
+$tablets: 769px;
+$phones: 481px;
+
+@import "media";
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;600;700;800&display=swap&subset=cyrillic");
+@import "main";
+@import "components/*.scss";
+
+
+

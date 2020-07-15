@@ -1,0 +1,233 @@
+.slider-section {
+  background: #f8faf9;
+  &:before {
+    content: url(./img/berries_slider.png);
+    position: absolute;
+    bottom: -15rem;
+    right: 0;
+    @include phones {
+      right: -3.75rem;
+    }
+  }
+  @media screen and (min-width: $phones) {
+    &:after {
+      content: url(./img/rasberry.png);
+      position: absolute;
+      top: -12.5rem;
+      left: 0;
+    }
+  }
+}
+.slider-container {
+  max-width: 990px;
+  overflow: hidden;
+}
+.slider-area {
+  display: flex;
+  justify-content: center;
+}
+.slider {
+  border: none;
+  display: flex;
+  position: relative;
+  // right: 0;
+}
+.bx-wrapper {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+  img {
+    margin: 0 auto;
+  }
+}
+.slider__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  // flex-shrink: 0;
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.slider__pic {
+  width: 50%;
+  object-fit: contain;
+  margin-right: 5%;
+  align-self: center;
+  @include tablets {
+    width: 80%;
+    margin-bottom: 1.875rem;
+    margin-right: 0;
+  }
+  @include phones {
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 60%;
+  }
+}
+.slider__content {
+  display: flex;
+  flex-direction: column;
+  width: 38%;
+  margin-right: 1.875rem;
+  @include tablets {
+    width: 75%;
+    margin-right: 0;
+    text-align: center;
+  }
+  @include phones {
+    width: 95%;
+  }
+}
+.option {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  background: #61c4d9;
+  border-radius: 5px;
+  width: 5.625rem;
+  height: 5.625rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.875rem;
+  &:hover {
+    background: #60aacc;
+  }
+  &:hover ~ .option__open {
+    display: block;
+  }
+  @include tablets {
+    display: none;
+  }
+}
+.option__icon {
+  width: 3.4375rem;
+  height: 3.75rem;
+  fill: #fff;
+}
+.option__open {
+  display: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.949);
+  width: 16.75rem;
+  position: absolute;
+  top: 0;
+  right: 5.3125rem;
+}
+.option-list {
+  padding: 1.25rem 1.25rem 1.25rem 1.875rem;
+}
+.option-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+.option-item__icon {
+  width: 2.375rem;
+  height: 2.375rem;
+  fill: #363636;
+  text-align: center;
+  margin-right: 1.4375rem;
+}
+.option-item__name,
+.option-item__weight {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #363636;
+}
+.option-item__weight {
+  margin-left: auto;
+}
+.slider__title {
+  font-size: 2.25rem;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 0.8125rem;
+  @include tablets {
+    font-size: 1.875rem;
+  }
+}
+.slider__text {
+  margin-bottom: 3.125rem;
+  @include tablets {
+    font-size: 1.25rem;
+    margin-bottom: 0.9375rem;
+  }
+}
+.slider__desc {
+  display: flex;
+  margin-bottom: 1.875rem;
+  @include tablets {
+    justify-content: center;
+  }
+}
+.slider__desc-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+  span {
+    color: #000;
+    font-weight: 700;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.slider__btn {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablets {
+    justify-content: center;
+  }
+}
+.slider__price {
+  font-size: 3.75rem;
+  color: rgb(21, 21, 21);
+  text-transform: uppercase;
+  line-height: 1;
+  vertical-align: middle;
+  font-weight: 300;
+  margin-right: 5%;
+  @include phones {
+    font-size: 2.8125rem;
+  }
+}
+.slider-btn {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
+  @include tablets {
+    top: 29%;
+    &--left {
+      left: 4.375rem;
+    }
+    &--right {
+      right: 4.375rem;
+    }
+  }
+  @include phones {
+    top: 18%;
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+    img {
+      width: 50%;
+    }
+  }
+}
