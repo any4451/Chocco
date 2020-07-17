@@ -1,7 +1,7 @@
 .reviews-section {
   position: relative;
   &:after {
-    content: url(./img/berries_with_grey_leaf.webp);
+    content: url(./img/berries_with_grey_leaf.png);
     position: absolute;
     bottom: -6.4375rem;
     left: 0;
@@ -11,7 +11,7 @@
     }
   }
   &:before {
-    content: url(./img/strawberry.webp);
+    content: url(./img/strawberry.png);
     position: absolute;
     top: 3.125rem;
     right: 0;
@@ -35,7 +35,7 @@
   position: relative;
   margin-bottom: 1.25rem;
   min-height: 23.75rem;
-  background: url(./img/decor-review.webp) right top no-repeat;
+  background: url(./img/decor-review.png) right top no-repeat;
   background-color: #f8faf9;
   padding: 3.125rem 2.8125rem 2.125rem;
   @include tablets {

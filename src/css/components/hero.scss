@@ -4,19 +4,19 @@
   justify-content: space-between;
   height: 100%;
   padding: 1.5rem 0 2.8125rem;
-  background: url(./img/bars.webp) right center / 50% auto no-repeat;
+  background: url(./img/bars.png) right center / 50% auto no-repeat;
   @include tablets {
     background: none;
   }
 }
 .hero {
-  background: url(./img/hero.webp) right bottom no-repeat;
+  background: url(./img/hero.png) right bottom no-repeat;
   background-color: #61c4d9;
   color: #fff;
   position: relative;
   @media screen and (min-width: $tablets) {
     &:before {
-      content: url(./img/leaf1.webp);
+      content: url(./img/leaf1.png);
       position: absolute;
       bottom: -3.75rem;
       left: 9.5625rem;
@@ -24,7 +24,7 @@
 }
 @media screen and (min-width: $tablets) {
   &:after {
-    content: url(./img/berries.webp);
+    content: url(./img/berries.png);
     position: absolute;
     right: 8.75rem;
     bottom: -3.375rem;
@@ -41,7 +41,7 @@
   }
 
   @include phones {
-    background: url(./img/hero.webp) right bottom 88% / contain no-repeat;
+    background: url(./img/hero.png) right bottom 88% / contain no-repeat;
     background-color: #61c4d9;
   }
 }

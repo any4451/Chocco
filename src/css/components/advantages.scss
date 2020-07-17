@@ -1,6 +1,6 @@
 .advantages-section {
   @media screen and (min-width: $phones) {
-    background: url(./img/leaf-grey.webp) center left no-repeat;
+    background: url(./img/leaf-grey.png) center left no-repeat;
   }
   @include tablets {
     background-position: top 4.625rem left;
@@ -48,7 +48,7 @@
   }
   &:after {
     position: absolute;
-    content: url(./img/decor-separator.webp);
+    content: url(./img/decor-separator.png);
     top: 3.125rem;
     right: 0;
     transform: translate(50%);

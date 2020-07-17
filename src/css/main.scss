@@ -110,7 +110,7 @@ h3 {
       margin-bottom: 0.625rem;
       width: 19.75rem;
       height: 20.625rem;
-      background: url(./img/hero-tablet.webp) center center / contain no-repeat;
+      background: url(./img/hero-tablet.png) center center / contain no-repeat;
     }
   }
   @include phones {
@@ -154,19 +154,19 @@ h3 {
   margin-bottom: 0.625rem;
 }
 .delivery-section {
-  background: #d3ddd9 url(./img/pattern-delivery.webp);
+  background: #d3ddd9 url(./img/pattern-delivery.png);
   background-size: cover;
   position: relative;
   @media screen and (min-width: $tablets){
     &:before {
       position: absolute;
-      content: url(./img/berry-delivery.webp);
+      content: url(./img/berry-delivery.png);
       bottom: 4.6875rem;
       left: 8.9375rem;
     }
     &:after {
       position: absolute;
-      content: url(./img/leaf-delivery.webp);
+      content: url(./img/leaf-delivery.png);
       bottom: 4.6875rem;
       right: 1.875rem;
     }

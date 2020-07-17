@@ -19,14 +19,14 @@
   position: relative;
   &::before {
     position: absolute;
-    content: url(./img/leaf1.webp);
+    content: url(./img/leaf1.png);
     left: -7.0625rem;
     bottom: -3.4375rem;
     z-index: 100;
   }
   &::after {
     position: absolute;
-    content: url(./img/leaf-player.webp);
+    content: url(./img/leaf-player.png);
     right: -5.0625rem;
     top: -5rem;
     z-index: 100;
@@ -87,7 +87,7 @@
   left: 0;
   bottom: 0;
   cursor: pointer;
-  background: url(./img/Granola-Bars-splash.webp) center center / cover
+  background: url(./img/Granola-Bars-splash.jpg) center center / cover
     no-repeat;
 }
 .player__controls {
