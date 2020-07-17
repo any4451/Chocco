@@ -2,7 +2,7 @@
   position: relative;
   &:after {
     position: absolute;
-    content: url(./img/blackberry-video.png);
+    content: url(./img/blackberry-video.webp);
     bottom: -10rem;
     right: 0;
     z-index: -2;
@@ -19,14 +19,14 @@
   position: relative;
   &::before {
     position: absolute;
-    content: url(./img/leaf1.png);
+    content: url(./img/leaf1.webp);
     left: -7.0625rem;
     bottom: -3.4375rem;
     z-index: 100;
   }
   &::after {
     position: absolute;
-    content: url(./img/leaf-player.png);
+    content: url(./img/leaf-player.webp);
     right: -5.0625rem;
     top: -5rem;
     z-index: 100;
@@ -87,7 +87,7 @@
   left: 0;
   bottom: 0;
   cursor: pointer;
-  background: url(./img/Granola-Bars-splash.jpg) center center / cover
+  background: url(./img/Granola-Bars-splash.webp) center center / cover
     no-repeat;
 }
 .player__controls {

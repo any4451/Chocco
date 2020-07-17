@@ -48,9 +48,9 @@ task('scripts', () => {
   return src('src/js/*.js')
   .pipe(gulpIf(env === 'dev', sourcemaps.init()))
   .pipe(concat('main.min.js', {newLine: ';'}))
-  .pipe(gulpIf(env === 'prod',babel({
+  .pipe(babel({
     presets: ['@babel/env']
-})))
+}))
   .pipe(uglify())
   .pipe(gulpIf(env === 'dev', sourcemaps.write()))
   .pipe(dest('./dist'));
@@ -67,7 +67,7 @@ task('styles', () => {
         cascade: false
     }))
       // .pipe(gulpIf(env === 'prod', gcmq()))
-      .pipe(gulpIf(env === 'prod',  cleanCSS()))
+      .pipe(cleanCSS())
       .pipe(gulpIf(env === 'dev', sourcemaps.write()))
       .pipe(dest('./dist'));
   });
@@ -84,7 +84,7 @@ task('browser-sync', () => {
 task('watch', () => {
   watch('./src/**/*.scss', series ('styles'));
   watch('./src/*.html', series ('copy:html'));
-  watch('./src/**/*.js', series ('scripts'));
+  // watch('./src/**/*.js', series ('scripts'));
 })
 
 task ('default',

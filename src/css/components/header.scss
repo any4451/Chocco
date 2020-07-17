@@ -5,9 +5,10 @@
 }
 .logo {
   display: block;
-  img {
-    width: 100%;
-  }
+  font-size: 25px;
+  line-height: 1;
+  font-family: 'Time New Roman', sans-serif;
+  width: 3.5rem;
 }
 .menu__list {
   display: flex;

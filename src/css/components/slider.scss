@@ -1,7 +1,7 @@
 .slider-section {
   background: #f8faf9;
   &:before {
-    content: url(./img/berries_slider.png);
+    content: url(./img/berries_slider.webp);
     position: absolute;
     bottom: -15rem;
     right: 0;
@@ -11,7 +11,7 @@
   }
   @media screen and (min-width: $phones) {
     &:after {
-      content: url(./img/rasberry.png);
+      content: url(./img/rasberry.webp);
       position: absolute;
       top: -12.5rem;
       left: 0;

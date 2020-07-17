@@ -1,11 +1,11 @@
 .accordeon-section {
-  background: url(./img/accordeon-bars.png), #000;
+  background: url(./img/accordeon-bars.webp), #000;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   color: #fff;
   &::before {
-    content: url(./img/rasberry-one.png);
+    content: url(./img/rasberry-one.webp);
     position: absolute;
     top: -4.375rem;
     left: 2.375rem;
