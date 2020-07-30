@@ -74,6 +74,8 @@ const scrollViewport = direction => {
 
 $(window).on('wheel', e => {
   const deltaY = e.originalEvent.deltaY;
+
+
   if (deltaY > 0) {
     scrollViewport('next');
   }

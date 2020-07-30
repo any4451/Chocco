@@ -13,6 +13,7 @@ const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
 const gulpIf = require('gulp-if');
+const imagemin = require('gulp-imagemin');
 const env = process.env.NODE_ENV;
 const browserSync = require('browser-sync').create();
 
@@ -35,7 +36,9 @@ task ('copy:html', () => {
 });
 
 task ('images', () => {
-  return src('src/img/*').pipe(dest('dist/img'))
+  return src('src/img/*')
+  .pipe(imagemin())
+  .pipe(dest('dist/img'))
 });
 
 
@@ -81,10 +84,12 @@ task('browser-sync', () => {
     });
 });
 
+
+
 task('watch', () => {
   watch('./src/**/*.scss', series ('styles'));
   watch('./src/*.html', series ('copy:html'));
-  // watch('./src/**/*.js', series ('scripts'));
+  watch('./src/**/*.js', series ('scripts'));
 })
 
 task ('default',
